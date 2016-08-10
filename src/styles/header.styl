@@ -1,0 +1,49 @@
+.site-header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  max-width: 960px
+  margin: 0 auto
+  padding-top: 15px
+  padding-bottom: 10px
+
+  border-bottom: 1px solid #ccc;
+
+.nav
+  max-width: 390px
+  width: 100%
+  margin-right: 65px
+
+  ul
+    display: flex
+    justify-content: space-between
+  a
+    color: grey-7c
+    font-size: 14px
+    text-transform: uppercase
+    text-decoration: none
+
+.personal
+  display: table
+  width: auto
+  position: relative
+
+  color: grey-7c
+  font-size: 14px
+  font-weight: 700
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: -40px
+    margin: auto
+    display: block
+    size 25px
+
+    background-image: url(resources/personal-arr.svg)
+  a
+    color: inherit;
+    text-transform: uppercase
+    text-decoration: none
