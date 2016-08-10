@@ -12,7 +12,9 @@ const browserSync = bsGet('server');
 gulp.task('style', function () {
   return gulp.src(SRC_DIR.style_src)
     .pipe(sourcemaps.init())
-    .pipe(stylus())
+    .pipe(stylus({
+      'include css': true
+    }))
     .pipe(postcss([
       require('autoprefixer'),
       require('postcss-browser-reporter')({
