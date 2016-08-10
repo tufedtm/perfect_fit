@@ -1,9 +1,9 @@
 'use strict';
 
 import gulp from 'gulp'
-import postcss from 'gulp-postcss'
-import stylus from 'gulp-stylus'
 import sourcemaps from 'gulp-sourcemaps'
+import stylus from 'gulp-stylus'
+import postcss from 'gulp-postcss'
 import {get as bsGet} from 'browser-sync';
 import SRC_DIR from './CONST'
 
@@ -21,6 +21,6 @@ gulp.task('style', function () {
     ]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(SRC_DIR.dest))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream({match: '**/*.css'}))
 });
 

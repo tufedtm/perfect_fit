@@ -3,11 +3,10 @@ const SRC_DIR = {
 
   font: 'src/fonts/**/*',
   image: 'src/**/*.{jpg,png,svg}',
-  script: 'src/**/*.js',
+  script_src: 'src/scripts/*.js',
   style_src: 'src/styles/app.styl',
-  style_watch: 'src/{blocks,styles}/**/*.styl',
-  template_src: 'src/pages/*.jade',
-  template_watch: 'src/**/*.jade'
+  style_watch: 'src/styles/**/*.styl',
+  template_src: 'src/pages/*.html',
 };
 
 module.exports = SRC_DIR;
