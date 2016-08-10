@@ -1,0 +1,95 @@
+.ionTabs__head-wrap
+  background-color: #f7f7f7;
+
+.ionTabs__head,
+.ionTabs__body
+  container()
+
+.ionTabs__head
+  display: flex
+  justify-content: space-between
+  padding: 0
+
+  list-style-type: none
+  counter-reset li
+
+.ionTabs__tab
+  position: relative
+
+  width: 100%
+  padding: 55px 30px 55px 125px
+
+  font-size: 18px
+  cursor: pointer
+  list-style-type: none
+  background: none
+  border-left: 1px solid #ccc
+
+  &::before
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 40px
+
+    content: counter(li)
+    counter-increment: li
+    display: flex
+    justify-content: center
+    align-items: center
+    size 65px
+    margin: auto
+
+    font-size: 48px
+    border: 3px solid grey-a5
+    border-radius: 50%
+  &:nth-of-type(1)
+    font-size: 20px
+    text-transform: uppercase
+
+    &.ionTabs__tab_state_active
+      color: additional-color-1;
+      &::before
+        border-color: additional-color-1;
+      &::after
+        css-triangle(additional-color-1, down, 46px, 15px)
+
+  &:nth-of-type(2)
+    &.ionTabs__tab_state_active
+      color: active-color;
+      &::before
+        border-color: active-color;
+      &::after
+        css-triangle(active-color, down, 46px, 15px)
+
+  &:nth-of-type(3)
+    border-right: 1px solid #ccc
+    &.ionTabs__tab_state_active
+      color: additional-color-2;
+      &::before
+        border-color: additional-color-2;
+      &::after
+        css-triangle(additional-color-2, down, 46px, 15px)
+
+  &.ionTabs__tab_state_active
+    cursor: default
+    &::before
+      background-color: #fff;
+    &::after
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      margin: 0 auto;
+
+.tabs__title
+  display: block
+
+  font-size: 20px
+  font-weight: 700
+  text-transform: uppercase
+
+.ionTabs__item
+  display: none
+
+  &.ionTabs__item_state_active
+    display: block

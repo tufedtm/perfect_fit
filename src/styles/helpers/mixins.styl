@@ -42,3 +42,31 @@ retinaBackground($image, $ext = 'png') {
     background-image url('../images/' + $image + '@2x.' + $ext)
   }
 }
+
+container($width = 960px)
+  max-width: $width
+  margin: 0 auto;
+
+css-triangle($triangle-color, $triangle-direction, $triangle-width, $triangle-heigth = $triangle-width)
+  content: ''
+  display: block
+  width: 0
+  height: 0
+  border-style: inset
+  border-width: $triangle-heigth ($triangle-width / 2)
+  if $triangle-direction == down
+    border-color: $triangle-color transparent transparent
+    border-top-style: solid
+    border-bottom-width: 0
+  if $triangle-direction == up
+    border-color: transparent transparent $triangle-color
+    border-bottom-style: solid
+    border-top-width: 0
+  if $triangle-direction == right
+    border-color: transparent transparent transparent $triangle-color
+    border-left-style: solid
+    border-right-width: 0
+  if $triangle-direction == left
+    border-color: transparent $triangle-color transparent transparent
+    border-right-style: solid
+    border-left-width: 0

@@ -1,3 +1,7 @@
 $(() => {
-  console.log('asd');
+
+  $.ionTabs('#tabs_1', {
+    type: 'none'
+  });
+
 });
