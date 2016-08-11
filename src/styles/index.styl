@@ -1,11 +1,8 @@
 .ionTabs__head-wrap
   background-color: #f7f7f7;
 
-.ionTabs__head,
-.ionTabs__body
-  container()
-
 .ionTabs__head
+  container()
   display: flex
   justify-content: space-between
   padding: 0
@@ -88,8 +85,105 @@
   font-weight: 700
   text-transform: uppercase
 
+
 .ionTabs__item
   display: none
+  height: 465px
+
+  font-size: 18px
+  line-height: 1.4
+  text-align: center
+  background-repeat: no-repeat
+
+  &:nth-of-type(1)
+    container()
+    padding-top: 40px
+
+    background-image: url(resources/tab1_bg.jpg)
+    background-position-x: right
+
+  &:nth-of-type(2)
+    container()
+    padding-top: 20px
+
+    background-image: url(resources/tab1_bg.jpg)
+    background-position-x: right
 
   &.ionTabs__item_state_active
-    display: block
+    display: flex
+    justify-content: space-between
+
+  .tabs__item-title
+    color: additional-color-1
+
+.tabs__item-left,
+.tabs__item-right
+  position: relative
+  width: 100%
+
+.tabs__item-right
+  padding-left: 100px
+
+.tabs__item-title
+  margin-left: -140px
+
+  font-size: 20px
+  text-align: left;
+  text-transform: uppercase
+
+.tabs__item-title-bold
+  display: block
+
+  font-size: 27px
+  font-weight: 700
+  text-indent: 85px
+
+.score
+  display: flex
+  position: absolute
+  bottom: 45px
+
+  line-height: 1
+  &__item
+    display: flex
+    width: 120px
+    height: 60px
+
+    border: 1px solid #ccc;
+    border-radius: 50px
+    background-color: #fff;
+
+    & + &
+      margin-left: 20px
+
+  &__point
+    position: relative
+    top: -1px
+    left: -1px
+
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    size 60px
+
+    color: #ffffff
+    font-size: 15px
+
+    border-radius: 50%
+    background-color: additional-color-1;
+
+  &__weight
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    flex-grow 1
+    padding-right: 10px
+
+.score-point
+  font-size: 25px
+  font-weight: 700
+
+.score-weight
+  font-size: 20px
