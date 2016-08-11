@@ -459,7 +459,7 @@ body {
   margin: 0 auto;
   padding-top: 40px;
   background-image: url("resources/tab1_bg.jpg");
-  background-position-x: right;
+  background-position: right;
 }
 .ionTabs__item:nth-of-type(1) .tabs__item-right {
   text-align: center;
@@ -476,7 +476,7 @@ body {
   margin: 0 auto;
   padding-top: 35px;
   background-image: url("resources/tab3_bg.jpg");
-  background-position-y: calc(100% - 30px);
+  background-position: left calc(100% - 30px);
 }
 .ionTabs__item:nth-of-type(3) .tabs__item-left,
 .ionTabs__item:nth-of-type(3) .tabs__item-right {
@@ -550,6 +550,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
+  left: 0;
   bottom: 45px;
   line-height: 1;
 }
