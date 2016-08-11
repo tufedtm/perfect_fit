@@ -6,7 +6,7 @@ import runSequence from 'run-sequence'
 gulp.task('default', function () {
   runSequence(
     'clear',
-    ['template', 'style', 'script', 'resources'],
+    ['template', 'style', 'script', 'static'],
     ['serve', 'watch']
   );
 });

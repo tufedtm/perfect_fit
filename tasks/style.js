@@ -22,7 +22,7 @@ gulp.task('style', function () {
       })
     ]))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(SRC_DIR.dest))
+    .pipe(gulp.dest(SRC_DIR.dest + '/static/css/'))
     .pipe(browserSync.stream({match: '**/*.css'}))
 });
 

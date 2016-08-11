@@ -1,8 +1,8 @@
 'use strict';
 
 import gulp from 'gulp'
+import sourcemaps from 'gulp-sourcemaps'
 import babel from 'gulp-babel';
-import sourcemaps from 'gulp-sourcemaps';
 // import {get as bsGet} from 'browser-sync';
 import SRC_DIR from './CONST'
 
@@ -15,7 +15,6 @@ gulp.task('script', function () {
       presets: ['es2015']
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(SRC_DIR.dest));
+    .pipe(gulp.dest(SRC_DIR.dest + '/static/js/'));
     // .pipe(browserSync.stream({match: "**/*.js"}));
 });
-
