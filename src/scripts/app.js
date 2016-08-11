@@ -1,7 +1,12 @@
 $(() => {
 
   $.ionTabs('#tabs_1', {
-    type: 'none'
+    type: 'storage'
+  });
+
+  $('[data-js-code-reg-btn]').on('click', function () {
+    $(this).addClass('tab2__btn--hide');
+    $('.tab2__form').fadeIn(300);
   });
 
 });

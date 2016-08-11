@@ -89,6 +89,7 @@
 .ionTabs__item
   display: none
   height: 465px
+  position: relative
 
   font-size: 18px
   line-height: 1.4
@@ -103,11 +104,11 @@
     background-position-x: right
 
   &:nth-of-type(2)
-    container()
-    padding-top: 20px
+    container(1100px)
+    padding-top: 15px
 
-    background-image: url(resources/tab1_bg.jpg)
-    background-position-x: right
+    background-image: url(resources/tab2_bg.jpg)
+    background-position: left bottom
 
   &.ionTabs__item_state_active
     display: flex
@@ -187,3 +188,19 @@
 
 .score-weight
   font-size: 20px
+
+
+.tab2__form-wrap
+  position: absolute
+  bottom: 40px
+  right: 80px
+
+.tab2__btn
+  margin-bottom: 25px
+
+  &--hide
+    position: absolute
+    display: none
+
+.tab2__form
+  display: none
