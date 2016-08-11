@@ -87,7 +87,7 @@
         <button class="btn btn--large tab2__btn" data-js-code-reg-btn>регистрация кода</button>
 
         <form class="tab2__form">
-          <input class="input input--large" type="text" placeholder="Введите код с пачки">
+          <input class="input input--large" type="text" placeholder="Введите код с пачки" required>
           <button class="btn btn--large" type="submit">отправить</button>
         </form>
 
@@ -96,7 +96,23 @@
     </div>
 
     <div class="ionTabs__item" data-name="Tab_3_name">
-      Контент вкладки 3
+
+      <div class="tabs__item-left">
+        <span class="tabs__item-title">регистрируй коды!
+          <span class="tabs__item-title-bold">кружка за <span class="tabs__item-title-bold-digit">4</span> балла</span>
+        </span>
+
+        <span>Собери всю коллекцию уникальных кружек!</span>
+      </div>
+
+      <div class="tabs__item-right">
+        <span class="tabs__item-title">Участвуй в розыгрыше!
+          <span class="tabs__item-title-bold">каждую неделю</span>
+        </span>
+
+        <span>Разыгрываем 8 ярких зонтов каждую неделю!</span>
+      </div>
+
     </div>
   </div>
 
@@ -117,6 +133,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="resources/lib/jquery-3.1.0.min.js"><\/script>')</script>
 <script src="resources/lib/ion.tabs/ion.tabs.min.js"></script>
 <script src="app.js"></script>
 </body>

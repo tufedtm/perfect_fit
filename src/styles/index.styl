@@ -93,7 +93,6 @@
 
   font-size: 18px
   line-height: 1.4
-  text-align: center
   background-repeat: no-repeat
 
   &:nth-of-type(1)
@@ -103,12 +102,51 @@
     background-image: url(resources/tab1_bg.jpg)
     background-position-x: right
 
+    .tabs__item-right
+      text-align: center
+
   &:nth-of-type(2)
     container(1100px)
     padding-top: 15px
 
     background-image: url(resources/tab2_bg.jpg)
     background-position: left bottom
+
+  &:nth-of-type(3)
+    container(972px)
+    padding-top: 35px
+
+    background-image: url(resources/tab3_bg.jpg)
+    background-position-y calc(100% - 30px)
+
+    .tabs__item-left,
+    .tabs__item-right
+      flex-direction: column
+      justify-content: space-between
+      padding-bottom: 40px
+
+    .tabs__item-right
+      .tabs__item-title
+        position: relative
+        color: additional-color-1
+
+        &::after
+          display: block
+          width: 48px
+          height: 51px
+          position: absolute
+          right: 0
+          bottom: 0
+
+          content: ''
+          background-image: url(resources/7days.svg);
+
+        .tabs__item-title-bold
+          text-indent: 100px
+
+    .tabs__item-title
+      color: additional-color-2
+
 
   &.ionTabs__item_state_active
     display: flex
@@ -120,14 +158,14 @@
 .tabs__item-left,
 .tabs__item-right
   position: relative
+  display: flex
   width: 100%
 
 .tabs__item-right
   padding-left: 100px
+  justify-content: center
 
 .tabs__item-title
-  margin-left: -140px
-
   font-size: 20px
   text-align: left;
   text-transform: uppercase
@@ -204,3 +242,18 @@
 
 .tab2__form
   display: none
+
+
+.tabs__item-title-bold-digit
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  padding-right: 2px
+
+  font-size: 33px;
+  line-height: 40px;
+  text-align: center;
+  text-indent: 0;
+
+  border: 3px solid;
+  border-radius: 50%;
