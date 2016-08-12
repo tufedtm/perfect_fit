@@ -7,6 +7,7 @@
 .rules__item
   position: relative
   height: 240px
+  margin-bottom: 20px
 
   background-repeat: no-repeat
   background-position: bottom
@@ -19,9 +20,16 @@
 
     background-image: url(../img/rules_1.png);
 
+    &::after
+      top: 100%;
+      right: -20px;
+      transform: scale(-1, 1);
+
     .rules__title
       margin-bottom: 20px
+
       color: additional-color-1;
+      font-size: 20px
       line-height: 25px
 
     .rules__text
@@ -35,6 +43,10 @@
 
     background-image: url(../img/rules_2.jpg);
 
+    &::after
+      top: 100%;
+      left: -70px
+
     .rules__title
       color: active-color;
 
@@ -47,6 +59,9 @@
     background-image: url(../img/rules_3.png);
     background-size: contain
 
+    &::after
+      content: none
+
     .rules__title
       color: additional-color-2;
 
@@ -57,13 +72,22 @@
       margin-top: -10px
       padding-right: 45px
 
+  &::after
+    content: ''
+    position: absolute
+    display: block
+    size 46px 80px
+    z-index: 1;
+
+    background-image: url(../img/rules-arr.svg);
+
 .rules__title
   position: relative
   display: block
   margin-left: 75px
   margin-bottom: 25px
 
-  font-size: 20px
+  font-size: 18px
 
   &::before
     content: counter(item)
@@ -85,6 +109,7 @@
 
 .rules__head
   display: block
+  font-size: 20px
   font-weight: 700
   text-transform: uppercase
 
