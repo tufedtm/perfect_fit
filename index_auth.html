@@ -28,25 +28,83 @@
   </nav>
 
   
-    <div class="personal">
-      <a href="">регистрация</a> /
-      <a href="">вход</a>
-    </div>
-  
+  <div class="personal auth">
+    <a href="">личный кабинет</a>
+  </div>
+
 
 </header>
 
 
-<p class="h1">Заголовок 1 уровень</p>
-<p class="h2">Заголовок 2 уровень</p>
-<p class="h-additional">Дополнительный акцентный</p>
-<p>Текст на главной до авторизации</p>
-<p class="auth">Основной текст на сайте</p>
-<p class="nav">Меню</p>
 
-<button class="btn btn--large">регистрация кода</button>
-<button class="btn">восстановить</button>
-<button class="btn btn--minor">войти</button>
+  <div class="index-auth">
+
+    <div class="ionTabs__item" data-name="Tab_2_name">
+      <div class="tab2__form-wrap">
+
+        <button class="btn btn--large tab2__btn" data-js-code-reg-btn>регистрация кода</button>
+
+        <form class="tab2__form">
+          <input class="input input--large" type="text" placeholder="Введите код с пачки" required>
+          <button class="btn btn--large" type="submit">отправить</button>
+        </form>
+
+      </div>
+    </div>
+
+    <div class="choice-cups-wrap">
+
+      <div class="choice-cups">
+        <!-- <div class="current-points-wrap zero-points"> -->
+        <div class="current-points-wrap">
+
+          <span class="current-points">7</span>
+
+          <div class="current-points__text">
+
+            <span class="current-points__text-major">Баллов доступно</span>
+            <span class="current-points__text-minor">Пора подумать, какую <br> кружку заказать следующей!</span>
+
+          </div>
+
+        </div>
+
+        <div class="cups-items">
+          <div class="cups__item cups__item--ordered">
+            <img src="static/img/del/cup.png" alt="">
+          </div>
+          <div class="cups__item cups__item--ordered">
+            <img src="static/img/del/cup.png" alt="">
+          </div>
+          <div class="cups__item">
+            <img src="static/img/del/cup.png" alt="">
+          </div>
+          <div class="cups__item">
+            <img src="static/img/del/cup.png" alt="">
+          </div>
+          <div class="cups__item">
+            <img src="static/img/del/cup.png" alt="">
+          </div>
+          <div class="cups__item cups__item--ordered">
+            <img src="static/img/del/cup.png" alt="">
+          </div>
+          <div class="cups__item">
+            <img src="static/img/del/cup.png" alt="">
+          </div>
+          <div class="cups__item">
+            <img src="static/img/del/cup.png" alt="">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- <a class="btn cup-order-btn btn--minor" href="">заказать кружку</a> -->
+      <a class="btn cup-order-btn" href="">заказать кружку</a>
+
+    </div>
+
+  </div>
+
 
 
 <footer class="site-footer">
