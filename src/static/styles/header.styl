@@ -27,6 +27,9 @@
     text-transform: uppercase
     text-decoration: none
 
+    &:hover
+      color: active-color
+
 .personal
   display: table
   width: auto
@@ -47,7 +50,16 @@
     size 25px
 
     background-image: url(../img/personal-arr.svg)
+
+  &.auth
+    &::before
+      background-image: url(../img/personal-user.svg)
+
   a
     color: inherit;
     text-transform: uppercase
     text-decoration: none
+
+    &:hover
+      color: active-color
+
