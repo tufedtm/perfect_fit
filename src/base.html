@@ -27,10 +27,13 @@
     </ul>
   </nav>
 
-  <div class="personal">
-    <a href="">регистрация</a> /
-    <a href="">вход</a>
-  </div>
+  {% block auth %}
+    <div class="personal">
+      <a href="">регистрация</a> /
+      <a href="">вход</a>
+    </div>
+  {% endblock %}
+
 </header>
 
 {% block content %}

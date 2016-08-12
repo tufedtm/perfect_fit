@@ -1,105 +1,105 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="ionTabs" id="tabs_1" data-name="index_tabs">
-  <div class="ionTabs__body">
-    <div class="ionTabs__item" data-name="Tab_1_name">
+  <div class="ionTabs" id="tabs_1" data-name="index_tabs">
+    <div class="ionTabs__body">
+      <div class="ionTabs__item" data-name="Tab_1_name">
 
-      <div class="tabs__item-left">
+        <div class="tabs__item-left">
         <span class="tabs__item-title">Чем больше упаковка &ndash;
           <span class="tabs__item-title-bold">тем больше баллов!</span>
         </span>
 
-        <div class="score">
-          <div class="score__item">
-            <div class="score__point">
-              <span class="score-point">3</span> балла
+          <div class="score">
+            <div class="score__item">
+              <div class="score__point">
+                <span class="score-point">3</span> балла
+              </div>
+              <div class="score__weight">
+                <span class="score-weight">1,2</span> кг
+              </div>
             </div>
-            <div class="score__weight">
-              <span class="score-weight">1,2</span> кг
+
+            <div class="score__item">
+              <div class="score__point">
+                <span class="score-point">2</span> балла
+              </div>
+              <div class="score__weight">
+                <span class="score-weight">650</span> гр
+              </div>
             </div>
+
+            <div class="score__item">
+              <div class="score__point">
+                <span class="score-point">1</span> балл
+              </div>
+              <div class="score__weight">
+                <span class="score-weight">190</span> гр
+              </div>
+            </div>
+
           </div>
 
-          <div class="score__item">
-            <div class="score__point">
-              <span class="score-point">2</span> балла
-            </div>
-            <div class="score__weight">
-              <span class="score-weight">650</span> гр
-            </div>
-          </div>
+        </div>
 
-          <div class="score__item">
-            <div class="score__point">
-              <span class="score-point">1</span> балл
-            </div>
-            <div class="score__weight">
-              <span class="score-weight">190</span> гр
-            </div>
-          </div>
+        <div class="tabs__item-right">
+          <span>Ищите код внутри пачки <br> или на стикере.</span>
+        </div>
+
+      </div>
+
+      <div class="ionTabs__item" data-name="Tab_2_name">
+
+        <div class="tab2__form-wrap">
+
+          <button class="btn btn--large tab2__btn" data-js-code-reg-btn>регистрация кода</button>
+
+          <form class="tab2__form">
+            <input class="input input--large" type="text" placeholder="Введите код с пачки" required>
+            <button class="btn btn--large" type="submit">отправить</button>
+          </form>
 
         </div>
 
       </div>
 
-      <div class="tabs__item-right">
-        <span>Ищите код внутри пачки <br> или на стикере.</span>
-      </div>
+      <div class="ionTabs__item" data-name="Tab_3_name">
 
-    </div>
-
-    <div class="ionTabs__item" data-name="Tab_2_name">
-
-      <div class="tab2__form-wrap">
-
-        <button class="btn btn--large tab2__btn" data-js-code-reg-btn>регистрация кода</button>
-
-        <form class="tab2__form">
-          <input class="input input--large" type="text" placeholder="Введите код с пачки" required>
-          <button class="btn btn--large" type="submit">отправить</button>
-        </form>
-
-      </div>
-
-    </div>
-
-    <div class="ionTabs__item" data-name="Tab_3_name">
-
-      <div class="tabs__item-left">
+        <div class="tabs__item-left">
         <span class="tabs__item-title">регистрируй коды!
           <span class="tabs__item-title-bold">кружка за <span class="tabs__item-title-bold-digit">4</span> балла</span>
         </span>
 
-        <span>Собери всю коллекцию уникальных кружек!</span>
-      </div>
+          <span>Собери всю коллекцию уникальных кружек!</span>
+        </div>
 
-      <div class="tabs__item-right">
+        <div class="tabs__item-right">
         <span class="tabs__item-title">Участвуй в розыгрыше!
           <span class="tabs__item-title-bold">каждую неделю</span>
         </span>
 
-        <span>Разыгрываем 8 ярких зонтов каждую неделю!</span>
-      </div>
+          <span>Разыгрываем 8 ярких зонтов каждую неделю!</span>
+        </div>
 
+      </div>
+    </div>
+
+    <div class="ionTabs__head-wrap">
+      <ul class="ionTabs__head">
+        <li class="ionTabs__tab" data-target="Tab_1_name">
+          <span class="tabs__title">покупай</span> perfect fit
+        </li>
+        <li class="ionTabs__tab" data-target="Tab_2_name">
+          <span class="tabs__title">активируй</span> коды и копи баллы
+        </li>
+        <li class="ionTabs__tab" data-target="Tab_3_name">
+          <span class="tabs__title">выигрывай</span> ценные призы
+        </li>
+      </ul>
     </div>
   </div>
-
-  <div class="ionTabs__head-wrap">
-    <ul class="ionTabs__head">
-      <li class="ionTabs__tab" data-target="Tab_1_name">
-        <span class="tabs__title">покупай</span> perfect fit
-      </li>
-      <li class="ionTabs__tab" data-target="Tab_2_name">
-        <span class="tabs__title">активируй</span> коды и копи баллы
-      </li>
-      <li class="ionTabs__tab" data-target="Tab_3_name">
-        <span class="tabs__title">выигрывай</span> ценные призы
-      </li>
-    </ul>
-  </div>
-</div>
 {% endblock %}
 
 {% block scripts_footer %}
-<script src="static/lib/ion.tabs.min.js"></script>
+  <script src="static/lib/ion.tabs.min.js"></script>
 {% endblock %}

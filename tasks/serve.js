@@ -10,6 +10,7 @@ gulp.task('serve', function () {
   browserSync.init({
     server: {
       baseDir: SRC_DIR.dest
-    }
+    },
+    startPath: 'index_auth.html'
   });
 });

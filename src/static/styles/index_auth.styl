@@ -1,0 +1,119 @@
+.index-auth
+  .ionTabs__item
+    display: block
+    max-width: 1010px
+
+    background-image: url(../img/auth_bg.jpg);
+    background-position: bottom;
+
+  .tab2__form-wrap
+    right: 40px
+
+.choice-cups-wrap
+  padding-bottom: 50px
+  background-color: #f7f7f7;
+
+.choice-cups
+  container()
+  display: flex
+  justify-content: space-between
+  margin-bottom: 80px
+
+.current-points-wrap
+  margin-right: 16px
+  padding-right: 15px
+  text-align: center
+
+  &.zero-points
+    .current-points
+      border-color: grey-a5
+    .current-points
+    .current-points__text-major
+      color: grey-a5
+
+.current-points
+  display: flex
+  justify-content: center
+  align-items: center
+  size: 90px
+  position: relative
+  top: -45px
+  left: 0
+  right: 0
+  margin 0 auto -35px
+
+  color: active-color
+  font-size: 42px
+
+  border: 3px solid active-color
+  border-radius: 50%
+  background-color: #fff;
+
+.current-points__text
+  position: relative
+  &::before
+  &::after
+    position: absolute
+    top: 0
+    left: calc(100% + 15px)
+    width: 0
+    height: 0
+
+    content: ''
+
+  &::before
+    top: 1px
+    border: solid transparent
+    border-width: 34px 15px
+    border-left-color: #f7f7f7
+    z-index: 1
+
+  &::after
+    border: solid transparent
+    border-width: 35px 16px
+    border-left-color: #b0b0af
+
+.current-points__text-major
+  display: block
+  margin-bottom: 15px
+
+  color: active-color
+  font-size: 18px
+  font-weight: 700
+
+.current-points__text-minor
+  font-size: 15px
+  line-height: 18px
+
+
+.cups-items
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  flex-grow: 1
+  padding-left: 10px
+  padding-right: 10px
+
+.cups__item
+  position: relative
+  padding: 4px 9px
+  &.cups__item--ordered
+    border: 1px solid grey-a5;
+    border-radius: 10px
+    background-color: #fff;
+
+    &::after
+      content: 'Уже заказано'
+      position: absolute
+      top: calc(100% + 10px)
+      left: 0
+      right: 0
+      margin: auto
+
+      color: grey-7c
+      font-size: 15px
+      text-align: center
+      opacity: .5
+
+.cup-order-btn
+  margin: 0 auto
