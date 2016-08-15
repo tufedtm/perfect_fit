@@ -101,27 +101,41 @@
   &--large
     height: 64px
 
-// checkbox
+// form
+.form__error-message
+  display: none
+  margin-bottom: 20px
 
+  color: #e80101
+  font-size: 14px
+  text-align: center
+
+.form--required
+  .form__error-message
+    display: block
+
+//// form
+
+// checkbox
 .checkbox + label
   display: inline-block
   margin-bottom: 10px
   cursor: pointer
 
-.checkbox:not(checked)
+.checkbox
   position: absolute
   opacity: 0
 
-.checkbox:not(checked) + label
+.checkbox + label
   position: relative
   padding-left: 30px
 
-.checkbox:not(checked) + label:before
-.checkbox:not(checked) + label:after
+.checkbox + label:before
+.checkbox + label:after
   position: absolute
   content: ''
 
-.checkbox:not(checked) + label:before
+.checkbox + label:before
   size: 20px
   top: 0
   left: 0
@@ -130,12 +144,17 @@
   border-radius 5px
   background-color: #fff
 
-.checkbox:not(checked) + label:after
+.checkbox + label:after
   size 20px 18px
   top: -2px
   left: 4px
 
 .checkbox:checked + label:after
   background-image url(../img/checked.svg)
+
+.form--required
+  [required]
+  .checkbox:not(:checked) + label:before
+    border: 1px solid #e80101;
 
 //// checkbox
