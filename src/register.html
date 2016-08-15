@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="auth-reg__container">
+    <div class="auth-reg__content">
+      <span class="h1">Регистрация</span>
+
+      <form class="reg__form">
+        <input class="input input--small" type="email" placeholder="Email" required>
+        <input class="input input--small" type="password" placeholder="Пароль" required>
+        <br>
+        <input type="checkbox" class="checkbox" id="checkbox-rules" required checked>
+        <label for="checkbox-rules">Я согласен с <a href="">Правилами сайта</a></label>
+        <br>
+        <input type="checkbox" class="checkbox" id="check-18" required>
+        <label for="check-18">Мне исполнилось 18 лет</label>
+
+        <button class="btn" type="submit">Зарегистрироваться</button>
+
+        <a href="">Восстановить пароль</a>
+      </form>
+
+      Уже есть аккаунт?
+      <a class="btn btn--minor" href="">Войти</a>
+    </div>
+  </div>
+
+{% endblock %}

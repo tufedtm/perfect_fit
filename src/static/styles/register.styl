@@ -1,0 +1,49 @@
+.auth-reg__container
+  container()
+  margin-bottom: 40px
+  padding-top: 40px
+  padding-bottom: 30px
+
+  background-image: url(../img/reg-auth-bg.jpg);
+  background-repeat: no-repeat
+  background-position: bottom left;
+
+.auth-reg__content
+  width: 300px
+  margin: 0 auto
+
+  color: grey-7c
+  font-size: 15px
+
+  .h1
+    margin-bottom: 30px
+
+    color: grey-7c
+    text-align: center
+
+  .btn.btn--minor
+    margin-top: 10px
+
+.reg__form
+  margin-bottom: 70px
+  &:after
+    content: ''
+    display: table
+    clear: both
+
+  input:not([type=checkbox])
+    display: block
+
+  a
+    color: inherit
+    line-height: 22px
+    text-decoration: underline
+    &:hover
+      color: grey-7c
+
+  .btn
+    margin-top: 15px
+    margin-bottom: 10px
+
+    + a
+      float: right
