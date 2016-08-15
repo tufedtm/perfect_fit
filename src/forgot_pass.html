@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="auth-reg__container">
+    <div class="auth-reg__content">
+      <p class="form-title">Введи email, указанный тобой при регистрации</p>
+
+      <!-- <form class="reg__form form--required"> -->
+      <form class="reg__form">
+        <p class="form__error-message">Поля обязательны для заполнения</p>
+
+        <input class="input input--small" type="email" placeholder="Email" required>
+
+        <button class="btn" type="submit">Восстановить</button>
+
+        <a href="register.html">Регистрация</a>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
