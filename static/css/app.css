@@ -166,12 +166,13 @@ table {
 }
 body {
   min-width: 1100px;
-  font-family: Arial, sans-serif;
   color: #a5a5a5;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
 }
 .h1 {
   display: block;
-  color: #a5a5a5;
+  color: #7c7c7c;
   font-size: 27px;
   font-weight: 700;
   text-transform: uppercase;
@@ -283,6 +284,12 @@ body {
 .input--large {
   height: 64px;
 }
+textarea {
+  width: 460px;
+  height: 185px;
+  padding: 15px;
+  border-radius: 10px;
+}
 .form__error-message {
   display: none;
   margin-bottom: 20px;
@@ -292,6 +299,10 @@ body {
 }
 .form--required .form__error-message {
   display: block;
+}
+.form--required [required],
+.form--required .checkbox:not(:checked) + label:before {
+  border: 1px solid #e80101;
 }
 .checkbox + label {
   display: inline-block;
@@ -328,10 +339,6 @@ body {
 }
 .checkbox:checked + label:after {
   background-image: url("../img/checked.svg");
-}
-.form--required [required],
-.form--required .checkbox:not(:checked) + label:before {
-  border: 1px solid #e80101;
 }
 .site-header {
   display: -webkit-box;
@@ -1064,6 +1071,152 @@ body {
   margin-bottom: 10px;
   line-height: 22px;
   text-align: center;
+}
+.faq-wrap {
+  padding-top: 40px;
+  padding-bottom: 250px;
+}
+.faq-wrap .h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.ask-add {
+  width: 320px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+}
+.faq__ask-wrap {
+  display: none;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  background-color: #f7f7f7;
+}
+.faq__ask-wrap:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: inset;
+  border-width: 12px 17px;
+  border-color: transparent transparent #f7f7f7;
+  border-bottom-style: solid;
+  border-top-width: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  margin: auto;
+}
+.faq__ask-wrap.active {
+  display: block;
+}
+.faq__ask-form {
+  max-width: 960px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.faq__ask-form fieldset {
+  max-width: 420px;
+  width: 100%;
+  position: relative;
+  border: none;
+}
+.faq__ask-form fieldset .btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.faq__ask-form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+}
+.faq__ask-form label .input {
+  margin-bottom: 0;
+}
+.faq__content {
+  max-width: 640px;
+  margin: 0 auto;
+  padding-left: 30px;
+  color: #7c7c7c;
+  list-style: decimal;
+}
+.faq__item {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.faq__item.active {
+  margin-bottom: 50px;
+  color: #e4007b;
+}
+.faq__item.active .faq__question:before {
+  background-image: url("../img/faq_bd-active.svg");
+}
+.faq__item.active .faq__question:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: inset;
+  border-width: 8px 7.5px;
+  border-color: transparent transparent #e4007b;
+  border-bottom-style: solid;
+  border-top-width: 0;
+}
+.faq__item.active .faq__answer {
+  height: auto;
+  color: #7c7c7c;
+}
+.faq__question {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  position: relative;
+}
+.faq__question:before,
+.faq__question:after {
+  position: absolute;
+  bottom: 0;
+  content: '';
+}
+.faq__question:before {
+  width: 100%;
+  height: 1px;
+  background-image: url("../img/faq_bd.svg");
+}
+.faq__question:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: inset;
+  border-width: 8px 7.5px;
+  border-color: #7c7c7c transparent transparent;
+  border-top-style: solid;
+  border-bottom-width: 0;
+  top: 5px;
+  left: calc(100% + 10px);
+}
+.faq__answer {
+  height: 0;
+  overflow: hidden;
+  font-size: 15px;
 }
 .site-footer {
   padding: 30px;
