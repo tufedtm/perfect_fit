@@ -11,6 +11,6 @@ gulp.task('serve', function () {
     server: {
       baseDir: SRC_DIR.dest
     },
-    startPath: 'faq.html'
+    startPath: 'order.html'
   });
 });
