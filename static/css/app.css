@@ -170,6 +170,7 @@ body {
   color: #a5a5a5;
 }
 .h1 {
+  display: block;
   color: #a5a5a5;
   font-size: 27px;
   font-weight: 700;
@@ -257,14 +258,80 @@ body {
   width: 300px;
   height: 50px;
   margin-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
   color: #7c7c7c;
-  font-size: 18px;
-  text-align: center;
+  font-size: 15px;
   border: 1px solid #7c7c7c;
   border-radius: 9px;
 }
+.input::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+.input::-moz-placeholder {
+  color: #bdbdbd;
+}
+.input:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+.input::placeholder {
+  color: #bdbdbd;
+}
+.input--small {
+  height: 40px;
+}
 .input--large {
   height: 64px;
+}
+.form__error-message {
+  display: none;
+  margin-bottom: 20px;
+  color: #e80101;
+  font-size: 14px;
+  text-align: center;
+}
+.form--required .form__error-message {
+  display: block;
+}
+.checkbox + label {
+  display: inline-block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.checkbox + label {
+  position: relative;
+  padding-left: 30px;
+}
+.checkbox + label:before,
+.checkbox + label:after {
+  position: absolute;
+  content: '';
+}
+.checkbox + label:before {
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  border: 1px solid #7c7c7c;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.checkbox + label:after {
+  width: 20px;
+  height: 18px;
+  top: -2px;
+  left: 4px;
+}
+.checkbox:checked + label:after {
+  background-image: url("../img/checked.svg");
+}
+.form--required [required],
+.form--required .checkbox:not(:checked) + label:before {
+  border: 1px solid #e80101;
 }
 .site-header {
   display: -webkit-box;
@@ -653,6 +720,10 @@ body {
   bottom: 40px;
   right: 80px;
 }
+.tab2__form-wrap input[type=text] {
+  font-size: 18px;
+  text-align: center;
+}
 .tab2__btn {
   margin-bottom: 25px;
 }
@@ -937,6 +1008,62 @@ body {
 .rules-btn {
   margin: 0 auto 50px;
   width: 380px;
+}
+.auth-reg__container {
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 570px;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background-image: url("../img/reg-auth-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+.auth-reg__content {
+  width: 300px;
+  margin: 0 auto;
+  color: #7c7c7c;
+  font-size: 15px;
+}
+.auth-reg__content .h1 {
+  margin-bottom: 30px;
+  color: #7c7c7c;
+  text-align: center;
+}
+.auth-reg__content .btn.btn--minor {
+  margin-top: 10px;
+}
+.reg__form {
+  margin-bottom: 70px;
+}
+.reg__form:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.reg__form input:not([type=checkbox]) {
+  display: block;
+}
+.reg__form a {
+  color: inherit;
+  line-height: 22px;
+  text-decoration: underline;
+}
+.reg__form a:hover {
+  color: #7c7c7c;
+}
+.reg__form .btn {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.reg__form .btn + a {
+  float: right;
+}
+.auth-reg__content .form-title {
+  margin-bottom: 10px;
+  line-height: 22px;
+  text-align: center;
 }
 .site-footer {
   padding: 30px;

@@ -38,24 +38,34 @@
 </header>
 
 
-  <div class="rules-wrap">
-    <div class="rules__item">
-      <span class="rules__title"><span class="rules__head">Покупай</span> PERFECT FIT</span>
-      <span class="rules__text">Чем больше упаковка – тем больше баллов!</span>
-    </div>
 
-    <div class="rules__item">
-      <span class="rules__title"><span class="rules__head">Активируй</span> коды и копи баллы</span>
-      <span class="rules__text">Ищи код внутри пачки или на стикере. <br> Регистрация кодов с 01.09.2016 по 30.11.2016</span>
-    </div>
+  <div class="auth-reg__container">
+    <div class="auth-reg__content">
+      <span class="h1">Регистрация</span>
 
-    <div class="rules__item">
-      <span class="rules__title"><span class="rules__head">Выигрывай</span> ценные призы</span>
-      <span class="rules__text">Собери всю коллекцию уникальных кружек! <br> Кружка за 4 балла. <br><br> Участвуй в розыгрыше зонтов каждую неделю!</span>
+      <!-- <form class="reg__form form--required"> -->
+      <form class="reg__form">
+        <p class="form__error-message">Поля обязательны для заполнения</p>
+
+        <input class="input input--small" type="email" placeholder="Email" required>
+        <input class="input input--small" type="password" placeholder="Пароль" required>
+        <br>
+        <input type="checkbox" class="checkbox" id="checkbox-rules" required checked>
+        <label for="checkbox-rules">Я согласен с <a href="">Правилами сайта</a></label>
+        <br>
+        <input type="checkbox" class="checkbox" id="check-18" required>
+        <label for="check-18">Мне исполнилось 18 лет</label>
+
+        <button class="btn" type="submit">Зарегистрироваться</button>
+
+        <a href="forgot_pass.html">Восстановить пароль</a>
+      </form>
+
+      Уже есть аккаунт?
+      <a class="btn btn--minor" href="auth.html">Войти</a>
     </div>
   </div>
 
-  <a class="btn rules-btn" href="">читать полные правила акции</a>
 
 
 <footer class="site-footer">
