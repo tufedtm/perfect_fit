@@ -9,10 +9,10 @@
     <div class="order__steps">
 
       <div class="order__head">
-        <div class="order__step-head">
+        <div class="order__step-head current">
           <span>выбери кружку</span>
         </div>
-        <div class="order__step-head current">
+        <div class="order__step-head">
           <span>контактные данные</span>
         </div>
         <div class="order__step-head">
@@ -22,7 +22,7 @@
 
       <div class="order__content">
 
-        <div class="order__step-content" data-js-cups-tab="1">
+        <div class="order__step-content current" data-js-cups-tab="1">
 
           <div class="order__cups-wrap">
             <a href="static/img/del/cup-big.png"><img src="static/img/del/cup.png" alt=""></a>
@@ -43,7 +43,7 @@
 
         </div>
 
-        <div class="order__step-content current" data-js-cups-tab="2">
+        <div class="order__step-content" data-js-cups-tab="2">
 
           <p class="h-additional">Спасибо за выбор!</p>
           <p class="h-sub">Заполни анкету победителя и переходи к выбору способа доставки!</p>
@@ -167,7 +167,105 @@
 
         <div class="order__step-content" data-js-cups-tab="3">
 
+          <p class="h-sub">Надеемся, приз тебе понравится. <br> Ты можете получить его двумя способами:</p>
 
+          <div class="order-tab3__head">
+            <button class="active" data-js-tab3-btn="1">Заказать доставку почтой</button>
+            <button data-js-tab3-btn="2">Забрать в офисе в Москве</button>
+          </div>
+
+          <div class="order-tab3__content">
+
+            <div class="order-tab3__first active" data-js-tab3-content="1">
+              <p class="h-sub">Пожалуйста, укажи адрес доставки. <br> Все призы будут отправлены почтой не позже 31
+                января 2017 года.</p>
+
+              <form class="order-tab3__form form--required">
+                <p class="form__error-message">Поля обязательны для заполнения</p>
+
+                <div class="order-tab3__form-wrap">
+                  <div class="order-tab3__form-left">
+                    <label>Почтовый <br> индекс
+                      <input class="input input--small" type="text" required>
+                    </label>
+                    <label>Страна
+                      <input class="input input--small" type="text" required>
+                    </label>
+                    <label>Регион
+                      <select name="region" id="select-region" title="region">
+                        <option value="" disabled selected hidden>Выберите...</option>
+                        <option value="reg1">рег1</option>
+                        <option value="reg2">рег2</option>
+                      </select>
+                    </label>
+                    <label>Населенный <br> пункт
+                      <select name="locality" id="select-locality" title="locality">
+                        <option value="" disabled selected hidden>Выберите...</option>
+                        <option value="loc1">НП1</option>
+                        <option value="loc2">НП2</option>
+                      </select>
+                    </label>
+                    <label>Название н.п.
+                      <input class="input input--small" type="text">
+                    </label>
+                  </div>
+                  <div class="order-tab3__form-right">
+                    <label>Тип улицы
+                      <select name="street" id="select-street" title="street">
+                        <option value="" disabled selected hidden>Выберите...</option>
+                        <option value="street1">НП1</option>
+                        <option value="street2">НП2</option>
+                      </select>
+                    </label>
+                    <label>Название <br> улицы
+                      <input class="input input--small" type="text">
+                    </label>
+                    <div class="small-input-wrap">
+                      <label class="label--small">Дом
+                        <input class="input input--small input--micro" type="text">
+                      </label>
+                      <label class="label--small">Строение
+                        <input class="input input--small input--micro" type="text">
+                      </label>
+                      <label class="label--small">Корпус
+                        <input class="input input--small input--micro" type="text">
+                      </label>
+                      <label class="label--small">Квартира
+                        <input class="input input--small input--micro" type="text">
+                      </label>
+                    </div>
+                    <input type="checkbox" class="checkbox" id="checkbox-personal" checked>
+                    <label for="checkbox-personal">Я даю согласие на обработку персональных данных</label>
+                  </div>
+                </div>
+
+                <button class="btn" type="submit">Отправить</button>
+              </form>
+            </div>
+
+            <div class="order-tab3__second" data-js-tab3-content="2">
+              <div class="order-tab3__second-wrap">
+                <div class="order-tab3__second-left">
+                  <div class="map" id="map"></div>
+                </div>
+
+                <div class="order-tab3__second-right">
+                  <p class="h-additional">Нам тоже хочется поскорее вручить подарок!</p>
+                  <p>Ты сам можешь получить свой приз в центре выдачи призов в период с 01.11.2016 по 31.01.2017.
+                    <br>Пожалуйста, предварительно оповести нас о желании забрать приз самостоятельно в нашем офисе,
+                    который находится по адресу:</p>
+
+                  <p class="order-tab3__second-address">
+                    г.Москва, метро: Улица 1905 года. <br> 2-я Звенигородская улица 13 cтр. 18ж
+                  </p>
+
+                  <button class="btn">Подтвердить</button>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
 
         </div>
 
@@ -181,4 +279,78 @@
 
 {% block scripts_footer %}
   <script src="static/lib/jquery.formstyler.min.js"></script>
+  <script>
+    function initMap() {
+      var styleArray = [
+        {
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [{"color": "#e9e9e9"}, {"lightness": 17}]
+        }, {
+          "featureType": "landscape",
+          "elementType": "geometry",
+          "stylers": [{"color": "#f5f5f5"}, {"lightness": 20}]
+        }, {
+          "featureType": "road.highway",
+          "elementType": "geometry.fill",
+          "stylers": [{"color": "#ffffff"}, {"lightness": 17}]
+        }, {
+          "featureType": "road.highway",
+          "elementType": "geometry.stroke",
+          "stylers": [{"color": "#ffffff"}, {"lightness": 29}, {"weight": 0.2}]
+        }, {
+          "featureType": "road.arterial",
+          "elementType": "geometry",
+          "stylers": [{"color": "#ffffff"}, {"lightness": 18}]
+        }, {
+          "featureType": "road.local",
+          "elementType": "geometry",
+          "stylers": [{"color": "#ffffff"}, {"lightness": 16}]
+        }, {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [{"color": "#f5f5f5"}, {"lightness": 21}]
+        }, {
+          "featureType": "poi.park",
+          "elementType": "geometry",
+          "stylers": [{"color": "#dedede"}, {"lightness": 21}]
+        }, {
+          "elementType": "labels.text.stroke",
+          "stylers": [{"visibility": "on"}, {"color": "#ffffff"}, {"lightness": 16}]
+        }, {
+          "elementType": "labels.text.fill",
+          "stylers": [{"saturation": 36}, {"color": "#333333"}, {"lightness": 40}]
+        }, {
+          "featureType": "transit",
+          "elementType": "geometry",
+          "stylers": [{"color": "#f2f2f2"}, {"lightness": 19}]
+        }, {
+          "featureType": "administrative",
+          "elementType": "geometry.fill",
+          "stylers": [{"color": "#fefefe"}, {"lightness": 20}]
+        }, {
+          "featureType": "administrative",
+          "elementType": "geometry.stroke",
+          "stylers": [{"color": "#fefefe"}, {"lightness": 17}, {"weight": 1.2}]
+        }
+      ];
+      var myLatLng = {lat: 55.761726, lng: 37.553010};
+
+      var mapDiv = document.getElementById('map');
+      var map = new google.maps.Map(mapDiv, {
+        center: myLatLng,
+        zoom: 17,
+        disableDefaultUI: true,
+        styles: styleArray,
+      });
+
+      var marker = new google.maps.Marker({
+        map: map,
+        position: myLatLng,
+        icon: 'static/img/marker-map.svg'
+      });
+    }
+  </script>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8p8EnVdKPHlMJv4smCsDToZGifIFCchY&callback=initMap"></script>
 {% endblock %}

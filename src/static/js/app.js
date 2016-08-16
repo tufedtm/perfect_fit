@@ -130,18 +130,34 @@ $(() => {
    * order cups slider
    *************************/
 
+
   /*
    * select styling
    */
-
   $('select').styler({
     selectSmartPositioning: false,
   });
 
+
   /*
    * radio button styling
    */
-
   $('input[type=radio]').styler();
+
+
+  /*
+   * tab3 head buttons
+   */
+  var tab3Btn = $('[data-js-tab3-btn]');
+  var tab3Conent = $('[data-js-tab3-content]');
+
+  tab3Btn.on('click', function () {
+    var index = $(this).attr('data-js-tab3-btn');
+    tab3Btn.removeClass('active');
+    $(this).addClass('active');
+    tab3Conent.removeClass('active');
+    $('[data-js-tab3-content=' + index + ']').addClass('active');
+    $('select').trigger('refresh');
+  });
 
 });
