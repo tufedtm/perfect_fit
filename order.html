@@ -206,14 +206,14 @@
 
           <p class="h-sub">Надеемся, приз тебе понравится. <br> Ты можете получить его двумя способами:</p>
 
-          <div class="order-tab3__head">
-            <button class="active" data-js-tab3-btn="1">Заказать доставку почтой</button>
-            <button data-js-tab3-btn="2">Забрать в офисе в Москве</button>
+          <div class="tabs-buttons">
+            <button class="active" data-js-tab-btn="1">Заказать доставку почтой</button>
+            <button data-js-tab-btn="2">Забрать в офисе в Москве</button>
           </div>
 
           <div class="order-tab3__content">
 
-            <div class="order-tab3__first active" data-js-tab3-content="1">
+            <div class="order-tab3__first active" data-js-tab-content="1">
               <p class="h-sub">Пожалуйста, укажи адрес доставки. <br> Все призы будут отправлены почтой не позже 31
                 января 2017 года.</p>
 
@@ -280,7 +280,7 @@
               </form>
             </div>
 
-            <div class="order-tab3__second" data-js-tab3-content="2">
+            <div class="order-tab3__second" data-js-tab-content="2">
               <div class="order-tab3__second-wrap">
                 <div class="order-tab3__second-left">
                   <div class="map" id="map"></div>
@@ -357,7 +357,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="resources/lib/jquery-3.1.0.min.js"><\/script>')</script>
 
-  <script src="static/lib/jquery.formstyler.min.js"></script>
   <script>
     function initMap() {
       var styleArray = [
@@ -433,6 +432,7 @@
   <script async defer
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8p8EnVdKPHlMJv4smCsDToZGifIFCchY&callback=initMap"></script>
 
+<script src="static/lib/jquery.formstyler.min.js"></script>
 <script src="static/js/app.js"></script>
 </body>
 </html>

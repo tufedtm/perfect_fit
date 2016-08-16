@@ -137,15 +137,15 @@ $(function () {
   /*
    * tab3 head buttons
    */
-  var tab3Btn = $('[data-js-tab3-btn]');
-  var tab3Conent = $('[data-js-tab3-content]');
+  var tabBtn = $('[data-js-tab-btn]');
+  var tabContent = $('[data-js-tab-content]');
 
-  tab3Btn.on('click', function () {
-    var index = $(this).attr('data-js-tab3-btn');
-    tab3Btn.removeClass('active');
+  tabBtn.on('click', function () {
+    var index = $(this).attr('data-js-tab-btn');
+    tabBtn.removeClass('active');
     $(this).addClass('active');
-    tab3Conent.removeClass('active');
-    $('[data-js-tab3-content=' + index + ']').addClass('active');
+    tabContent.removeClass('active');
+    $('[data-js-tab-content=' + index + ']').addClass('active');
     $('select').trigger('refresh');
   });
 });
