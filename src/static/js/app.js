@@ -34,7 +34,8 @@ $(() => {
   $('[data-js-cups-next-tab]').on('click', function () {
     var index = $(this).parent('[data-js-cups-tab]').attr('data-js-cups-tab');
     activateTabHead(parseFloat(index) + 1);
-    activateTabContent(this)
+    activateTabContent(this);
+    $('select').trigger('refresh');
   });
 
   function activateTabHead(index) {
@@ -128,5 +129,19 @@ $(() => {
   /*
    * order cups slider
    *************************/
+
+  /*
+   * select styling
+   */
+
+  $('select').styler({
+    selectSmartPositioning: false,
+  });
+
+  /*
+   * radio button styling
+   */
+
+  $('input[type=radio]').styler();
 
 });

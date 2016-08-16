@@ -9,10 +9,10 @@
     <div class="order__steps">
 
       <div class="order__head">
-        <div class="order__step-head current">
+        <div class="order__step-head">
           <span>выбери кружку</span>
         </div>
-        <div class="order__step-head">
+        <div class="order__step-head current">
           <span>контактные данные</span>
         </div>
         <div class="order__step-head">
@@ -22,7 +22,7 @@
 
       <div class="order__content">
 
-        <div class="order__step-content current" data-js-cups-tab="1">
+        <div class="order__step-content" data-js-cups-tab="1">
 
           <div class="order__cups-wrap">
             <a href="static/img/del/cup-big.png"><img src="static/img/del/cup.png" alt=""></a>
@@ -43,7 +43,123 @@
 
         </div>
 
-        <div class="order__step-content" data-js-cups-tab="2">
+        <div class="order__step-content current" data-js-cups-tab="2">
+
+          <p class="h-additional">Спасибо за выбор!</p>
+          <p class="h-sub">Заполни анкету победителя и переходи к выбору способа доставки!</p>
+
+          <form class="order-tab2__form">
+            <div class="order-tab2__left">
+
+              <label>Фамилия
+                <input class="input input--small" type="text" required>
+              </label>
+              <label>Имя
+                <input class="input input--small" type="text" required>
+              </label>
+              <label>Отчество
+                <input class="input input--small" type="text">
+              </label>
+
+            </div>
+
+            <div class="order-tab2__right">
+              <div class="order-tab2__form-fieldset">Дата <br> рождения
+                <div class="order-tab2__form-fieldset-wrap">
+                  <select name="day" id="select-day" title="day">
+                    <option value="" disabled selected hidden>День</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                  </select>
+                  <select name="month" id="select-month" title="month">
+                    <option value="" disabled selected hidden>Месяц</option>
+                    <option value="January">январь</option>
+                    <option value="February">февраль</option>
+                    <option value="March">март</option>
+                    <option value="April">апрель</option>
+                    <option value="May">май</option>
+                    <option value="June">июнь</option>
+                    <option value="July">июль</option>
+                    <option value="August">август</option>
+                    <option value="September">сентябрь</option>
+                    <option value="October">октябрь</option>
+                    <option value="November">ноябрь</option>
+                    <option value="December">декабрь</option>
+                  </select>
+                  <select name="year" id="select-year" title="year">
+                    <option value="" disabled selected hidden>Год</option>
+                    <option value="1980">1980</option>
+                    <option value="1981">1981</option>
+                    <option value="1982">1982</option>
+                    <option value="1983">1983</option>
+                    <option value="1984">1984</option>
+                    <option value="1985">1985</option>
+                    <option value="1986">1986</option>
+                    <option value="1987">1987</option>
+                    <option value="1988">1988</option>
+                    <option value="1989">1989</option>
+                    <option value="1990">1990</option>
+                    <option value="1991">1991</option>
+                    <option value="1992">1992</option>
+                    <option value="1993">1993</option>
+                    <option value="1994">1994</option>
+                    <option value="1995">1995</option>
+                    <option value="1996">1996</option>
+                    <option value="1997">1997</option>
+                    <option value="1998">1998</option>
+                    <option value="1999">1999</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="order-tab2__form-fieldset">Пол
+                <div class="order-tab2__form-fieldset-wrap">
+                  <label>
+                    <input type="radio" name="sex" id="">
+                    М
+                  </label>
+                  <label>
+                    <input type="radio" name="sex" id="">
+                    Ж
+                  </label>
+                </div>
+              </div>
+
+              <label>Номер <br> телефона
+                <input class="input input--small" type="tel" placeholder="+7 (___) ___ __ __">
+              </label>
+            </div>
+
+          </form>
 
           <button class="btn order-next-btn" data-js-cups-next-tab>продолжить заказ</button>
 
@@ -61,4 +177,8 @@
 
   </div>
 
+{% endblock %}
+
+{% block scripts_footer %}
+  <script src="static/lib/jquery.formstyler.min.js"></script>
 {% endblock %}

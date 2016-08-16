@@ -30,6 +30,7 @@
   &.current
     width: 260px
     z-index: 1
+    color: grey-7c
 
     background-color #e9e9e9
 
@@ -68,6 +69,18 @@
     padding-top: 55px
     padding-bottom: 55px
     position: relative
+
+  &:nth-of-type(2)
+    container(940px)
+    padding-top: 55px
+    padding-bottom: 55px
+    position: relative
+
+    .h-additional
+      margin-bottom: 15px
+      font-size: 27px
+      text-align: center
+      text-transform: uppercase
 
 .order__cups-wrap
   display: flex
@@ -147,3 +160,147 @@
 
 .order-next-btn
   margin: 50px auto 0
+
+/*
+ * tab 2
+*/
+
+.h-sub
+  margin-bottom: 50px
+  color: grey-7c
+  text-align: center
+
+.order-tab2__form
+  display: flex
+  justify-content: space-between
+  color: grey-7c
+
+.order-tab2__left
+.order-tab2__right
+  > label
+  .order-tab2__form-fieldset
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 420px
+    margin-bottom: 8px
+
+  .input
+    margin-bottom: 0
+
+.order-tab2__form-fieldset
+  height: 40px
+  .order-tab2__form-fieldset-wrap
+    width: 300px
+  label
+    margin-right: 20px
+    font-size: 18px
+    cursor: pointer
+
+.jq-selectbox
+  vertical-align: middle
+  cursor: pointer
+
+  &:nth-of-type(1)
+    width: 80px
+
+  &:nth-of-type(2)
+    width: 125px
+
+  &:nth-of-type(3)
+    width: 80px
+
+  & + &
+    margin-left: 3px
+
+  &.opened
+    .jq-selectbox__trigger-arrow
+      border-top: none
+      border-bottom: 8px solid grey-a5
+
+.jq-selectbox__select
+  display: flex
+  align-items: center
+  height: 40px
+  padding-left: 10px
+
+  border: 1px solid grey-7c
+  border-radius: 10px
+  color: #333
+
+.jq-selectbox__select-text
+  display: block
+  width: 100%
+  overflow: hidden
+
+  color: #bdbdbd
+  text-overflow: ellipsis
+
+.jq-selectbox .placeholder
+  color: #888
+
+.jq-selectbox__trigger-arrow
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 8px
+  width: 0
+  height: 0
+  margin: auto
+  border-top: 8px solid grey-a5
+  border-right: 8px solid transparent
+  border-left: 8px solid transparent
+
+.jq-selectbox__dropdown
+  width: 100%
+  margin-top: -10px
+  padding-top: 10px
+  border: 1px solid grey-7c
+  border-top: none
+  border-radius: 0 0 10px 10px
+  overflow: hidden
+  background: #FFF
+
+.jq-selectbox ul
+  margin: 0
+  padding: 0
+  max-height: 175px
+
+.jq-selectbox li
+  min-height: 18px
+  padding: 5px 10px 6px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  white-space: nowrap
+  color: grey-7c
+
+.jq-selectbox li.selected
+  background-color: additional-color-2
+  color: #FFF
+
+.jq-selectbox li:hover
+  background-color: active-color
+  color: #FFF
+
+.jq-selectbox li.disabled
+  display: none
+
+.jq-radio
+  size: 18px
+  margin-right: 5px
+
+  vertical-align: sub
+  border: 1px solid grey-7c
+  border-radius: 50%
+  cursor: pointer
+
+  &.checked
+    border-color: active-color
+
+    .jq-radio__div
+      size: 10px
+      margin: 3px 0 0 3px
+      border-radius: 50%
+      background: active-color
