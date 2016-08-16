@@ -60,6 +60,7 @@
 
 .order__step-content
   display: none
+  position: relative
 
   &.current
     display: block
@@ -68,19 +69,20 @@
     container(780px)
     padding-top: 55px
     padding-bottom: 55px
-    position: relative
 
   &:nth-of-type(2)
     container(940px)
     padding-top: 55px
     padding-bottom: 55px
-    position: relative
 
     .h-additional
       margin-bottom: 15px
       font-size: 27px
       text-align: center
       text-transform: uppercase
+
+  &:nth-of-type(3)
+    padding-top: 30px
 
 .order__cups-wrap
   display: flex
@@ -119,6 +121,7 @@
   border-radius 10px
   img
     max-width: 234px
+    max-height: 255px
 
 .cups-slider-prev
 .cups-slider-next
@@ -168,9 +171,10 @@
 .h-sub
   margin-bottom: 50px
   color: grey-7c
+  line-height: 22px
   text-align: center
 
-.order-tab2__form
+.order-tab2__form-wrap
   display: flex
   justify-content: space-between
   color: grey-7c
@@ -200,6 +204,7 @@
 .jq-selectbox
   vertical-align: middle
   cursor: pointer
+  background-color: #fff;
 
   &:nth-of-type(1)
     width: 80px
@@ -304,3 +309,158 @@
       margin: 3px 0 0 3px
       border-radius: 50%
       background: active-color
+
+/*
+ * tab 3
+ */
+
+.order-tab3__head
+  text-align: center
+
+  button
+    position: relative
+    margin-bottom: 35px
+    padding-bottom: 4px
+
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+    border: none
+    background: none
+
+    & + button
+      margin-left: 100px
+
+    &:before
+    &:after
+      position: absolute
+      bottom: 0
+      content: ''
+
+    &:before
+      width: 100%
+      height: 1px
+      background-image: url(../img/faq_bd.svg);
+
+    &:after
+      css-triangle(grey-7c, down, 15px, 8px)
+      top: 5px
+      left: calc(100% + 10px)
+
+    &.active
+      color: active-color
+      &:before
+        background-image: url(../img/faq_bd-active.svg);
+      &:after
+        css-triangle(active-color, up, 15px, 8px)
+
+.order-tab3__first
+.order-tab3__second
+  display: none
+  position: relative
+  padding-top: 40px
+  padding-bottom: 40px
+
+  background-color: #f7f7f7;
+
+  &:before
+    css-triangle(#f7f7f7, up, 34px, 12px)
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 100%
+    margin: auto
+
+  &.active
+    display: block
+
+  .h-sub
+    margin-bottom: 10px
+
+.order-tab3__first
+  &:before
+    left: -25%
+
+.order-tab3__second
+  &:before
+    left: 25%
+
+.order-tab3__form
+  container(940px)
+
+  .btn
+    margin: 40px auto 0
+
+.order-tab3__form-wrap
+  display: flex
+  justify-content: space-between
+  color: grey-7c
+
+  label
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 420px
+    margin-bottom: 8px
+
+    &.label--small
+      width: 200px
+
+    .input
+      margin-bottom: 0
+
+  .jq-selectbox
+    width: 300px
+
+  .checkbox
+    + label
+      height: 40px
+
+.small-input-wrap
+  column-count: 2
+
+.order-tab3__second-wrap
+  container(850px)
+  column-count: 2
+  column-gap: 100px
+
+.order-tab3__second-left
+.order-tab3__second-right
+  width: 370px
+
+.order-tab3__second-right
+  padding-top: 15px
+  line-height: 22px
+  .h-additional
+    margin-bottom: 25px
+
+.order-tab3__second-address
+  position: relative
+  margin-top: 30px
+  margin-bottom: 30px
+  padding-left: 45px
+  font-size: 18px
+
+  &:before
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    display: block
+    width: 28px
+    height: 38px
+    margin: auto
+
+    content: ''
+    background-image: url(../img/marker-address.svg);
+
+.map
+  size: 340px
+  margin-left: auto
+  z-index: 1
+
+  background-color: transparent;
+  border: 5px solid additional-color-2;
+  border-radius: 50%
+  .gm-style
+    height: 106% !important
