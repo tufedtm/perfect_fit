@@ -276,7 +276,7 @@
                   </div>
                 </div>
 
-                <button class="btn" type="submit">Отправить</button>
+                <button class="btn" type="submit" data-js-popup-link="delivery-client">Отправить</button>
               </form>
             </div>
 
@@ -296,7 +296,7 @@
                     г.Москва, метро: Улица 1905 года. <br> 2-я Звенигородская улица 13 cтр. 18ж
                   </p>
 
-                  <button class="btn">Подтвердить</button>
+                  <button class="btn" data-js-popup-link="delivery-office">Подтвердить</button>
 
                 </div>
               </div>
@@ -311,6 +311,49 @@
     </div>
 
   </div>
+
+  <div class="pop-up pop-up--delivery" data-js-popup-form="delivery-client">
+  <div class="pop-up__content">
+    <p class="h1">Отлично!</p>
+
+    <p class="h-sub">Мы вышлем приз до 31 января 2017 года года</p>
+
+    <p class="pop-up__text-action">Продолжай участвовать – призов еще много!</p>
+
+    <button class="pop-up__cancel"></button>
+
+    <div class="personal-ball-add">
+      <span>Активируй коды <br> и копи баллы!</span>
+      <form>
+        <input class="input input--small" type="text" placeholder="Введите код" required>
+        <button class="btn btn--small">отправить</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <div class="pop-up pop-up--delivery" data-js-popup-form="delivery-office">
+  <div class="pop-up__content">
+    <p class="h1">Отлично!</p>
+
+    <p class="h-sub">
+      Ждем тебя по адресу: г. Москва, метро: Улица 1905 года. <br>
+      2-ая Звенигородская улица 13 стр. 18 ж
+    </p>
+
+    <p class="pop-up__text-action">Продолжай участвовать – призов еще много!</p>
+
+    <button class="pop-up__cancel"></button>
+
+    <div class="personal-ball-add">
+      <span>Активируй коды <br> и копи баллы!</span>
+      <form>
+        <input class="input input--small" type="text" placeholder="Введите код" required>
+        <button class="btn btn--small">отправить</button>
+      </form>
+    </div>
+  </div>
+</div>
 
 
 

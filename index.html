@@ -93,7 +93,7 @@
 
           <form class="tab2__form">
             <input class="input input--large" type="text" placeholder="Введите код с пачки" required>
-            <button class="btn btn--large" type="submit">отправить</button>
+            <button class="btn btn--large" type="submit" data-js-popup-link="code">отправить</button>
           </form>
 
         </div>
@@ -135,6 +135,29 @@
       </ul>
     </div>
   </div>
+
+  <div class="pop-up pop-up--code" data-js-popup-form="code">
+  <div class="pop-up__content">
+    <p class="h1">Спасибо!</p>
+
+    <p class="h-sub">Код успешно зарегистрирован! <br> На счет зачислено:</p>
+
+    <p class="pop-up__ball-add"><span class="pop-up__ball">3</span> балла</p>
+
+    <a class="btn" href="order.html">Каталог призов</a>
+
+    <button class="pop-up__cancel"></button>
+
+    <div class="personal-ball-add">
+      <span>Активируй коды <br> и копи баллы!</span>
+      <form>
+        <input class="input input--small" type="text" placeholder="Введите код" required>
+        <button class="btn btn--small">отправить</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 
 
 <footer class="site-footer">

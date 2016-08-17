@@ -38,62 +38,9 @@
 </header>
 
 
-
-  <div class="auth-reg__container">
-    <div class="auth-reg__content">
-      <span class="h1">Регистрация</span>
-
-      <!-- <form class="reg__form form--required"> -->
-      <form class="reg__form">
-        <p class="form__error-message">Поля обязательны для заполнения</p>
-
-        <input class="input input--small" type="email" placeholder="Email" required>
-        <input class="input input--small" type="password" placeholder="Пароль" required>
-        <br>
-        <input type="checkbox" class="checkbox" id="checkbox-rules" required checked>
-        <label for="checkbox-rules">Я согласен с <a href="">Правилами сайта</a></label>
-        <br>
-        <input type="checkbox" class="checkbox" id="check-18" required>
-        <label for="check-18">Мне исполнилось 18 лет</label>
-
-        <button class="btn" type="submit" data-js-popup-link="register">Зарегистрироваться</button>
-
-        <a href="forgot_pass.html">Восстановить пароль</a>
-      </form>
-
-      Уже есть аккаунт?
-      <a class="btn btn--minor" href="auth.html">Войти</a>
-    </div>
+  <div class="not-found-page">
+    <a class="btn btn--minor" href="index_auth.html">Вернуться на главную</a>
   </div>
-
-  <div class="pop-up pop-up--register" data-js-popup-form="register">
-  <div class="pop-up__content">
-    <p class="h1">Рады, что ты с нами!</p>
-
-    <p class="h-sub">
-      На указанный e-mail было отправлено письмо с кодом <br>
-      подтверждения. Для завершения регистрации нужно ввести код <br>
-      в поле ниже или просто перейти по ссылке, которая будет в письме.
-    </p>
-
-    <form>
-      <input class="input input--small" type="text" placeholder="Введите код" required>
-      <button class="btn" type="submit">Завершить регистрацию</button>
-    </form>
-
-    <div class="repeat-code-wrap">
-      <p>Если письмо не пришло, проверь, <br> правильно ли указан адрес и загляни <br> в папку «спам».</p>
-
-      <form>
-        <input class="input input--small" type="text" placeholder="user@email.ru" required>
-        <button type="submit">Получить код повторно</button>
-      </form>
-    </div>
-
-    <button class="pop-up__cancel"></button>
-  </div>
-</div>
-
 
 
 <footer class="site-footer">

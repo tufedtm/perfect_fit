@@ -164,5 +164,36 @@ $(function () {
     $('[data-js-personal-tabs-content=' + index + ']').addClass('current');
     $('select').trigger('refresh');
   });
+
+  /*
+   * pop-up
+   */
+
+  $('[data-js-popup-link]').click(function () {
+    var name = $(this).attr('data-js-popup-link');
+    $('html').addClass('popup-active');
+    $('[data-js-popup-form=' + name + ']').addClass('active');
+  });
+
+  $('.pop-up__cancel').click(function () {
+    $('html').removeClass('popup-active');
+    $('.pop-up').removeClass('active');
+  });
+
+  $('.pop-up').click(function () {
+    $('html').removeClass('popup-active');
+    $('.pop-up').removeClass('active');
+  });
+
+  $('.pop-up *').click(function (e) {
+    e.stopPropagation();
+  });
+
+  $(document).keyup(function (e) {
+    if (e.keyCode == 27) {
+      $('html').removeClass('popup-active');
+      $('.pop-up').removeClass('active');
+    }
+  });
 });
 //# sourceMappingURL=app.js.map
