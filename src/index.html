@@ -56,7 +56,7 @@
 
           <form class="tab2__form">
             <input class="input input--large" type="text" placeholder="Введите код с пачки" required>
-            <button class="btn btn--large" type="submit">отправить</button>
+            <button class="btn btn--large" type="submit" data-js-popup-link="code">отправить</button>
           </form>
 
         </div>
@@ -98,6 +98,8 @@
       </ul>
     </div>
   </div>
+
+  {% include 'pop-up/code.html' %}
 {% endblock %}
 
 {% block scripts_footer %}

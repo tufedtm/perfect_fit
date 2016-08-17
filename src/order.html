@@ -239,7 +239,7 @@
                   </div>
                 </div>
 
-                <button class="btn" type="submit">Отправить</button>
+                <button class="btn" type="submit" data-js-popup-link="delivery-client">Отправить</button>
               </form>
             </div>
 
@@ -259,7 +259,7 @@
                     г.Москва, метро: Улица 1905 года. <br> 2-я Звенигородская улица 13 cтр. 18ж
                   </p>
 
-                  <button class="btn">Подтвердить</button>
+                  <button class="btn" data-js-popup-link="delivery-office">Подтвердить</button>
 
                 </div>
               </div>
@@ -275,6 +275,8 @@
 
   </div>
 
+  {% include 'pop-up/delivery-client.html' %}
+  {% include 'pop-up/delivery-office.html' %}
 {% endblock %}
 
 {% block scripts_footer %}

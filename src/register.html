@@ -19,7 +19,7 @@
         <input type="checkbox" class="checkbox" id="check-18" required>
         <label for="check-18">Мне исполнилось 18 лет</label>
 
-        <button class="btn" type="submit">Зарегистрироваться</button>
+        <button class="btn" type="submit" data-js-popup-link="register">Зарегистрироваться</button>
 
         <a href="forgot_pass.html">Восстановить пароль</a>
       </form>
@@ -29,4 +29,5 @@
     </div>
   </div>
 
+  {% include 'pop-up/register.html' %}
 {% endblock %}
