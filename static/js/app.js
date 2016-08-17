@@ -148,5 +148,21 @@ $(function () {
     $('[data-js-tab-content=' + index + ']').addClass('active');
     $('select').trigger('refresh');
   });
+
+  /*
+   * personal tabs
+   */
+  var personalTabs = $('[data-js-personal-tabs]');
+  var personalTabsContent = $('[data-js-personal-tabs-content]');
+
+  personalTabs.on('click', function () {
+    var index = $(this).attr('data-js-personal-tabs');
+    console.log(index);
+    personalTabs.removeClass('current');
+    $(this).addClass('current');
+    personalTabsContent.removeClass('current');
+    $('[data-js-personal-tabs-content=' + index + ']').addClass('current');
+    $('select').trigger('refresh');
+  });
 });
 //# sourceMappingURL=app.js.map
