@@ -1,0 +1,122 @@
+.personal-wrap
+  container(780px)
+  padding-top: 25px
+  padding-bottom: 25px
+
+.order__head--personal
+  .order__step-head
+    padding-left: 0
+    cursor: pointer
+  span
+    &:before
+      content: none
+
+
+.personal-tab__content
+  display: none
+
+  &.current
+    display: block
+
+.current-points-wrap--personal
+  display: flex
+  align-items: center
+  margin-top: 25px
+  margin-bottom: 30px
+  padding: 0
+  text-align: left
+
+  .current-points
+    position: static
+    width: 64px
+    height: 64px
+    margin: 0
+    font-size: 30px
+
+  .current-points__text-major
+    display: inline
+    margin: 0 50px 0 15px
+    font-size: 15px
+
+.personal-history
+  margin-bottom: 115px
+  color: grey-7c
+  text-align: center
+
+  table
+    width: 100%
+    margin-bottom: 40px
+
+  th
+  td
+    line-height: 47px
+    border-bottom: 1px solid #e9e9e9;
+
+  td
+    width: calc(100% / 3)
+
+    &:nth-of-type(2)
+      font-size: 20px
+
+    &.ball-plus
+      color: active-color
+    &.ball-minus
+      color: additional-color-2
+    &.ball-zero
+      color: additional-color-1
+
+  th
+    font-weight: 700
+    text-transform: uppercase
+
+  .btn
+    margin: 0 auto
+
+.cups-items-personal
+  margin-bottom: 55px
+
+.personal-ball-add
+  display: flex
+  padding: 25px
+
+  border-radius: 5px
+  background-image: url(../img/personal-ball-add-bg.png)
+
+  span
+    margin-left: 70px
+
+    color: #ffffff
+    font-size: 18px
+    font-weight: 700
+    line-height: 20px
+    text-indent: -70px
+
+  form
+    display: flex
+    justify-content: space-between
+    width: 500px
+    margin-left: auto
+
+  input
+    width: 240px
+    margin-bottom: 0
+
+    color: #fff
+    border: 1px solid rgba(255,255,255,.5)
+    background-color: transparent
+
+    &::placeholder
+      color: rgba(255,255,255,.5)
+
+    &:focus
+      border-color: #fff;
+
+  .btn
+    color: additional-color-2
+    background-color: #fff
+
+    &:hover
+      color: #fff
+      background-color: transparent
+    &::before
+      border-color: #fff

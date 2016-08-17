@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block auth %}
+  <div class="personal auth">
+    <a href="personal.html">личный кабинет</a>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="personal-wrap">
+
+    <div class="order__head order__head--personal">
+      <div class="order__step-head current" data-js-personal-tabs="1">
+        <span>Призы и баллы</span>
+      </div>
+      <div class="order__step-head" data-js-personal-tabs="2">
+        <span>адрес и контакты</span>
+      </div>
+      <div class="order__step-head" data-js-personal-tabs="3">
+        <span>сменить пароль</span>
+      </div>
+    </div>
+
+    <div class="personal-tab__content current" data-js-personal-tabs-content="1">
+
+      <!-- <div class="current-points-wrap current-points-wrap--personal zero-points"> -->
+      <div class="current-points-wrap current-points-wrap--personal">
+        <span class="current-points">7</span>
+        <span class="current-points__text-major">Баллов <br> доступно</span>
+        <span class="current-points__text-minor">Здесь ты можешь посмотреть все операции по своему игровому счету. <br> Оцени, на что ты тратишь баллы и за что получаешь их!</span>
+      </div>
+
+      <div class="personal-history">
+        <table>
+          <thead>
+          <tr>
+            <th>действие</th>
+            <th>баланс баллов</th>
+            <th>дата</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>Активирован код 12344</td>
+            <td class="ball-plus">+ 4</td>
+            <td>15.09.2016</td>
+          </tr>
+          <tr>
+            <td>Заказана кружка</td>
+            <td class="ball-minus">- 4</td>
+            <td>16.09.2016</td>
+          </tr>
+          <tr>
+            <td>Выигран зонт</td>
+            <td class="ball-zero">0</td>
+            <td>21.09.2016</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <a class="btn" href="order.html">Заказать кружку</a>
+      </div>
+
+      <div class="cups-items cups-items-personal">
+        <div class="cups__item cups__item--ordered">
+          <img src="static/img/del/cup.png" alt="">
+        </div>
+        <div class="cups__item cups__item--ordered">
+          <img src="static/img/del/cup.png" alt="">
+        </div>
+        <div class="cups__item">
+          <img src="static/img/del/cup.png" alt="">
+        </div>
+        <div class="cups__item">
+          <img src="static/img/del/cup.png" alt="">
+        </div>
+        <div class="cups__item">
+          <img src="static/img/del/cup.png" alt="">
+        </div>
+        <div class="cups__item cups__item--ordered">
+          <img src="static/img/del/cup.png" alt="">
+        </div>
+        <div class="cups__item">
+          <img src="static/img/del/cup.png" alt="">
+        </div>
+        <div class="cups__item">
+          <img src="static/img/del/cup.png" alt="">
+        </div>
+      </div>
+
+      <div class="personal-ball-add">
+        <span>Активируй коды <br> и копи баллы!</span>
+        <form>
+          <input class="input input--small" type="text" placeholder="Введите код" required>
+          <button class="btn btn--small">отправить</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="personal-tab__content" data-js-personal-tabs-content="2">123</div>
+    <div class="personal-tab__content" data-js-personal-tabs-content="3">456</div>
+
+  </div>
+{% endblock %}
