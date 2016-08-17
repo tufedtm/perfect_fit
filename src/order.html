@@ -169,14 +169,14 @@
 
           <p class="h-sub">Надеемся, приз тебе понравится. <br> Ты можете получить его двумя способами:</p>
 
-          <div class="order-tab3__head">
-            <button class="active" data-js-tab3-btn="1">Заказать доставку почтой</button>
-            <button data-js-tab3-btn="2">Забрать в офисе в Москве</button>
+          <div class="tabs-buttons">
+            <button class="active" data-js-tab-btn="1">Заказать доставку почтой</button>
+            <button data-js-tab-btn="2">Забрать в офисе в Москве</button>
           </div>
 
           <div class="order-tab3__content">
 
-            <div class="order-tab3__first active" data-js-tab3-content="1">
+            <div class="order-tab3__first active" data-js-tab-content="1">
               <p class="h-sub">Пожалуйста, укажи адрес доставки. <br> Все призы будут отправлены почтой не позже 31
                 января 2017 года.</p>
 
@@ -243,7 +243,7 @@
               </form>
             </div>
 
-            <div class="order-tab3__second" data-js-tab3-content="2">
+            <div class="order-tab3__second" data-js-tab-content="2">
               <div class="order-tab3__second-wrap">
                 <div class="order-tab3__second-left">
                   <div class="map" id="map"></div>
@@ -278,7 +278,6 @@
 {% endblock %}
 
 {% block scripts_footer %}
-  <script src="static/lib/jquery.formstyler.min.js"></script>
   <script>
     function initMap() {
       var styleArray = [

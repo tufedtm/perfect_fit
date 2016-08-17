@@ -314,46 +314,6 @@
  * tab 3
  */
 
-.order-tab3__head
-  text-align: center
-
-  button
-    position: relative
-    margin-bottom: 35px
-    padding-bottom: 4px
-
-    font-size: 16px
-    font-weight: 700
-    text-transform: uppercase
-    border: none
-    background: none
-
-    & + button
-      margin-left: 100px
-
-    &:before
-    &:after
-      position: absolute
-      bottom: 0
-      content: ''
-
-    &:before
-      width: 100%
-      height: 1px
-      background-image: url(../img/faq_bd.svg);
-
-    &:after
-      css-triangle(grey-7c, down, 15px, 8px)
-      top: 5px
-      left: calc(100% + 10px)
-
-    &.active
-      color: active-color
-      &:before
-        background-image: url(../img/faq_bd-active.svg);
-      &:after
-        css-triangle(active-color, up, 15px, 8px)
-
 .order-tab3__first
 .order-tab3__second
   display: none
