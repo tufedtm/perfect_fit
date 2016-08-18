@@ -2,9 +2,22 @@
   position: relative
   height: 570px
 
-  background-image: url(../img/404-bg.jpg);
+  background-image: url(../img/404-bg.jpg)
   background-position: center
   background-repeat: no-repeat
+  @media (max-width: 700px)
+    background-size: contain
+  @media (max-width: 620px)
+    height: 400px
+    margin: 5px
+    background-image: url(../img/xs/404-bg-xs.jpg)
+    background-position: top
+  @media (max-width: 530px)
+    height: 350px
+  @media (max-width: 450px)
+    height: 300px
+  @media (max-width: 360px)
+    height: 270px
 
   .btn
     position: absolute
@@ -12,3 +25,8 @@
     left: 300px;
     right: 0;
     margin: auto;
+    @media (max-width: 620px)
+      left: 0
+    @media (max-width: 550px)
+      top: auto
+      bottom: 30px
