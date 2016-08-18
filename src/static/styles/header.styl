@@ -1,4 +1,5 @@
 .site-header
+  position: relative
   display: flex
   justify-content: space-between
   align-items: center
@@ -8,14 +9,55 @@
   padding-bottom: 10px
 
   border-bottom: 1px solid #ccc;
+  @media (max-width: 980px)
+    padding: 10px 5px
 
 .logo
   img
     display: block
 
+.header-links
+  display: flex
+  justify-content: space-between
+  width: 100%
+
+  @media (max-width: 950px)
+    display: none
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    padding-left: 10px
+    padding-right: 10px
+    z-index: 10
+
+    flex-direction: column
+    text-align: center
+    background-color: #f7f7f7
+    &.active
+      display: flex
+    a
+      display: inline-block;
+      margin: 5px 0;
+      padding: 15px 0;
+    .nav
+      max-width: none
+      margin: 0
+      ul
+        flex-direction: column
+      li
+        border-bottom: 1px solid alpha(grey-a5, .5)
+
+    .personal
+      display: block
+      &::before
+        left: -190px
+        right: 0
+
 .nav
   max-width: 390px
   width: 100%
+  margin-left: 65px
   margin-right: 65px
 
   ul
@@ -64,3 +106,32 @@
     &:hover
       color: active-color
 
+
+.nav-toggle-xs
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 5px
+  size: 46px
+  margin: auto
+
+  border: 2px solid grey-7c
+  border-radius: 50%
+  background-color: transparent
+
+  @media (min-width: 951px)
+    display: none
+
+  &::before
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    width: 20px
+    height: 4px
+
+    content: ''
+    background-color: grey-7c
+    box-shadow: 0 7px 0 grey-7c, 0 -7px 0 grey-7c

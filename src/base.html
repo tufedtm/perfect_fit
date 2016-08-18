@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="cleartype" content="on">
   <meta name="HandheldFriendly" content="true">
@@ -14,27 +15,30 @@
 <body>
 
 <header class="site-header">
-  <a class="logo" href="/">
+  <a class="logo" href="index_auth.html">
     <img src="static/img/logo.svg" alt="perfect fit">
   </a>
 
-  <nav class="nav">
-    <ul>
-      <li><a href="">тест</a></li>
-      <li><a href="winners.html">победители</a></li>
-      <li><a href="faq.html">faq</a></li>
-      <!-- <li><a class="current" href="rules.html">правила и призы</a></li> -->
-      <li><a class="current" href="rules.html">правила и призы</a></li>
-    </ul>
-  </nav>
+  <button class="nav-toggle-xs" data-js-nav-toggle-xs></button>
 
-  {% block auth %}
-    <div class="personal">
-      <a href="register.html">регистрация</a> /
-      <a href="auth.html">вход</a>
-    </div>
-  {% endblock %}
+  <div class="header-links">
+    <nav class="nav">
+      <ul>
+        <li><a href="">тест</a></li>
+        <li><a href="winners.html">победители</a></li>
+        <li><a href="faq.html">faq</a></li>
+        <!-- <li><a class="current" href="rules.html">правила и призы</a></li> -->
+        <li><a class="current" href="rules.html">правила и призы</a></li>
+      </ul>
+    </nav>
 
+    {% block auth %}
+      <div class="personal">
+        <a href="register.html">регистрация</a> /
+        <a href="auth.html">вход</a>
+      </div>
+    {% endblock %}
+  </div>
 </header>
 
 {% block content %}

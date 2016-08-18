@@ -4,18 +4,48 @@
   color: #ffffff
   font-size: 14px
   background-color: #d8d8d8
+  @media (max-width: 950px)
+    padding: 0
 
 .footer-wrap
   container()
 
 .footer-top
   display: flex
+  @media (max-width: 950px)
+    flex-direction: column-reverse
+    .footer-soc
+      align-items: center
+      justify-content: center
+      padding-top: 20px
+      padding-bottom: 20px
+    .soc-text
+      max-width: none
+    .soc-buttons
+      height: 33px
+      margin-left: 25px
 
 .footer-nav
   width: 640px
+
+  @media (max-width: 950px)
+    width: auto
+    padding: 20px
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+
+  @media (max-width: 650px)
+    padding-left: 5px
+    padding-right: 5px
   ul
     column-count 3
     column-gap: 40px
+    @media (max-width: 650px)
+      column-count: 2
+      column-gap: 10px
+    @media (max-width: 380px)
+      padding-left: 25px
+      column-count: 1
   a
     color: inherit
     line-height: 22px
@@ -64,6 +94,14 @@
   line-height: 16px;
   column-count: 2;
   column-gap: 50px;
+
+  @media (max-width: 950px)
+    margin: 0
+    padding: 30px
+    column-count: 1
+    strong
+      display: inline-block
+      margin-bottom: 10px
 
   strong
     font-weight: 700
