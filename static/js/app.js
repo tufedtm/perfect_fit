@@ -195,5 +195,13 @@ $(function () {
       $('.pop-up').removeClass('active');
     }
   });
+
+  /*
+   * xs nav toggle
+   */
+
+  $('[data-js-nav-toggle-xs]').on('click', function () {
+    $('.header-links').toggleClass('active');
+  });
 });
 //# sourceMappingURL=app.js.map

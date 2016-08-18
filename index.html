@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="cleartype" content="on">
   <meta name="HandheldFriendly" content="true">
@@ -14,76 +15,39 @@
 <body>
 
 <header class="site-header">
-  <a class="logo" href="/">
+  <a class="logo" href="index_auth.html">
     <img src="static/img/logo.svg" alt="perfect fit">
   </a>
 
-  <nav class="nav">
-    <ul>
-      <li><a href="">тест</a></li>
-      <li><a href="winners.html">победители</a></li>
-      <li><a href="faq.html">faq</a></li>
-      <!-- <li><a class="current" href="rules.html">правила и призы</a></li> -->
-      <li><a class="current" href="rules.html">правила и призы</a></li>
-    </ul>
-  </nav>
+  <button class="nav-toggle-xs" data-js-nav-toggle-xs></button>
 
-  
-    <div class="personal">
-      <a href="register.html">регистрация</a> /
-      <a href="auth.html">вход</a>
-    </div>
-  
+  <div class="header-links">
+
+    <nav class="nav">
+      <ul>
+        <li><a href="">тест</a></li>
+        <li><a href="winners.html">победители</a></li>
+        <li><a href="faq.html">faq</a></li>
+        <!-- <li><a class="current" href="rules.html">правила и призы</a></li> -->
+        <li><a class="current" href="rules.html">правила и призы</a></li>
+      </ul>
+    </nav>
+
+    
+      <div class="personal">
+        <a href="register.html">регистрация</a> /
+        <a href="auth.html">вход</a>
+      </div>
+    
+
+  </div>
 
 </header>
 
 
   <div class="ionTabs" id="tabs_1" data-name="index_tabs">
     <div class="ionTabs__body">
-      <div class="ionTabs__item" data-name="Tab_1_name">
-
-        <div class="tabs__item-left">
-        <span class="tabs__item-title">Чем больше упаковка &ndash;
-          <span class="tabs__item-title-bold">тем больше баллов!</span>
-        </span>
-
-          <div class="score">
-            <div class="score__item">
-              <div class="score__point">
-                <span class="score-point">3</span> балла
-              </div>
-              <div class="score__weight">
-                <span class="score-weight">1,2</span> кг
-              </div>
-            </div>
-
-            <div class="score__item">
-              <div class="score__point">
-                <span class="score-point">2</span> балла
-              </div>
-              <div class="score__weight">
-                <span class="score-weight">650</span> гр
-              </div>
-            </div>
-
-            <div class="score__item">
-              <div class="score__point">
-                <span class="score-point">1</span> балл
-              </div>
-              <div class="score__weight">
-                <span class="score-weight">190</span> гр
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="tabs__item-right">
-          <span>Ищите код внутри пачки <br> или на стикере.</span>
-        </div>
-
-      </div>
+      <div class="ionTabs__item" data-name="Tab_1_name"></div>
 
       <div class="ionTabs__item" data-name="Tab_2_name">
 
@@ -134,6 +98,34 @@
         </li>
       </ul>
     </div>
+  </div>
+
+  <div class="index-xs">
+
+    <div class="index-hero-xs">
+      <form class="tab2__form">
+        <input class="input input--large" type="text" placeholder="Введите код с пачки" required>
+        <button class="btn btn--large" type="submit" data-js-popup-link="code">отправить</button>
+      </form>
+    </div>
+
+    <div class="index-steps-wrap-xs">
+      <ul>
+        <li class="index-step-xs">
+          <span>Покупай</span> PERFECT FIT
+        </li>
+        <li class="index-step-xs">
+          <span>Активируй</span> коды и копи баллы
+        </li>
+        <li class="index-step-xs">
+          <span>Выигрывай</span> ценные призы
+        </li>
+      </ul>
+
+      <a class="btn" href="rules.html">Правила и призы</a>
+    </div>
+
+
   </div>
 
   <div class="pop-up pop-up--code" data-js-popup-form="code">
