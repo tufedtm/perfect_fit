@@ -727,14 +727,19 @@ textarea {
   .ionTabs__item {
     height: 400px;
   }
-}
-@media (max-width: 880px) {
-  .ionTabs__item {
-    height: 350px;
+  .ionTabs__item .score {
+    left: 30px;
+  }
+  .ionTabs__item .score .score__item + .score__item {
+    margin-left: 10px;
   }
 }
 .ionTabs__item:nth-of-type(1) {
+  max-width: 960px;
+  margin: 0 auto;
   padding-top: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
   background-image: url("../img/tab1_bg.jpg");
   background-position: center;
 }
