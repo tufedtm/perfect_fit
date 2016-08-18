@@ -8,6 +8,19 @@
   background-image: url(../img/reg-auth-bg.jpg);
   background-repeat: no-repeat
   background-position: bottom left;
+  @media (max-width: 900px)
+    margin-left: 5px
+    margin-right: 5px
+    background-size: contain
+  @media (max-width: 700px)
+    min-height: auto
+    margin-bottom: 0
+    background-image: none
+
+.auth-reg__container--xs
+  @media (max-width: 700px)
+    .reg__form
+      margin-bottom: 20px
 
 .auth-reg__content
   width: 300px

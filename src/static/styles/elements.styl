@@ -131,42 +131,52 @@ textarea
 //// form
 
 // checkbox
-.checkbox + label
-  display: inline-block
-  margin-bottom: 10px
-  cursor: pointer
-
 .checkbox
   position: absolute
   opacity: 0
 
-.checkbox + label
-  position: relative
-  padding-left: 30px
+  + label
+    position: relative
+    display: inline-block
+    margin-bottom: 10px
+    padding-left: 30px
 
-.checkbox + label:before
-.checkbox + label:after
-  position: absolute
-  content: ''
-  bottom: 0
-  margin: auto
+    cursor: pointer
 
-.checkbox + label:before
-  size: 20px
-  top: 0
-  left: 0
+    &::before
+    &::after
+      position: absolute
+      content: ''
+      bottom: 0
+      margin: auto
 
-  border 1px solid grey-7c
-  border-radius 5px
-  background-color: #fff
+    &::before
+      size: 20px
+      top: 0
+      left: 0
 
-.checkbox + label:after
-  size 20px 18px
-  top: -2px
-  left: 4px
+      border 1px solid grey-7c
+      border-radius 5px
+      background-color: #fff
 
-.checkbox:checked + label:after
-  background-image url(../img/checked.svg)
+    &::after
+      size 20px 18px
+      top: -2px
+      left: 4px
+
+  @media (max-width: 900px)
+    &.checkbox--xs + label
+      margin-bottom: 30px
+      margin-left: 10px
+      padding-left: 45px
+      &::before
+        size: 30px
+      &::after
+        top: 0
+        left: 5px
+
+  &:checked + label:after
+    background-image url(../img/checked.svg)
 
 //// checkbox
 
