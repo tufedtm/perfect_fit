@@ -16,13 +16,9 @@ gulp.task('style', function () {
       'include css': true
     }))
     .pipe(postcss([
-      require('autoprefixer'),
-      require('postcss-browser-reporter')({
-        selector: 'body:before'
-      })
+      require('autoprefixer')
     ]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(SRC_DIR.dest + '/static/css/'))
     .pipe(browserSync.stream({match: '**/*.css'}))
 });
-

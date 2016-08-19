@@ -22,7 +22,11 @@ $(() => {
 
   //  add ask btn
   $('[data-js-add-ask-btn]').on('click', function () {
-    $('.faq__ask-wrap').addClass('active')
+    var text = $(this).text();
+    $(this).text(
+      text === 'Задать вопрос' ? 'Закрыть' : 'Задать вопрос'
+    );
+    $('.faq__ask-wrap').toggleClass('active')
   });
   ////  add ask btn
 
