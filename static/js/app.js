@@ -248,7 +248,7 @@ $(function () {
    * tabs
    */
 
-  $('#responsiveTabs').responsiveTabs({
+  $('[data-js-responsiveTabs]').responsiveTabs({
     startCollapsed: 'accordion',
     activate: function activate() {
       if (document.getElementById('map')) {
@@ -256,5 +256,7 @@ $(function () {
       }
     }
   });
+
+  $('[data-js-responsiveTabs]:not([data-js-responsiveTabs=1])').responsiveTabs('deactivate', 0);
 });
 //# sourceMappingURL=app.js.map

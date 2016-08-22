@@ -51,20 +51,20 @@
     <div class="order__steps">
 
       <div class="order__head order__head--order">
-        <div class="order__step-head">
+        <div class="order__step-head current">
           <span>выбери кружку</span>
         </div>
         <div class="order__step-head">
           <span>контактные данные</span>
         </div>
-        <div class="order__step-head current">
+        <div class="order__step-head">
           <span>доставка</span>
         </div>
       </div>
 
       <div class="order__content">
 
-        <div class="order__step-content" data-js-cups-tab="1">
+        <div class="order__step-content current" data-js-cups-tab="1">
 
           <div class="order__cups-item">
             <img src="static/img/del/cup-big.png" alt="">
@@ -207,11 +207,11 @@
 
         </div>
 
-        <div class="order__step-content current" data-js-cups-tab="3">
+        <div class="order__step-content" data-js-cups-tab="3">
 
           <p class="h-sub">Надеемся, приз тебе понравится. <br> Ты можете получить его двумя способами:</p>
 
-          <div id="responsiveTabs">
+          <div data-js-responsiveTabs>
             <ul>
               <li><a href="#tab-1">Заказать доставку почтой</a></li>
               <li><a href="#tab-2">Забрать в офисе в Москве</a></li>

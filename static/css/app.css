@@ -2596,8 +2596,18 @@ textarea {
   padding-top: 40px;
 }
 .winners-wrap .h1 {
-  margin-bottom: 45px;
   text-align: center;
+}
+@media (max-width: 800px) {
+  .winners-wrap .h1 {
+    margin-bottom: 45px;
+  }
+}
+.winners-wrap .r-tabs-nav .r-tabs-anchor {
+  margin-top: 35px;
+}
+.winners-wrap .r-tabs-tab.r-tabs-state-active::before {
+  top: calc(100% + 80px);
 }
 @media (max-width: 800px) {
   .tabs-buttons--winners button {
