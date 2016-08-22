@@ -9,15 +9,17 @@
 {% block content %}
   <div class="personal-wrap">
 
+    <h1 class="h1">Личный кабинет</h1>
+
     <div class="order__head order__head--personal">
       <div class="order__step-head current" data-js-personal-tabs="1">
-        <span>Призы и баллы</span>
+        <span>Призы <br> и баллы</span>
       </div>
       <div class="order__step-head" data-js-personal-tabs="2">
-        <span>адрес и контакты</span>
+        <span>адрес <br> и контакты</span>
       </div>
       <div class="order__step-head" data-js-personal-tabs="3">
-        <span>сменить пароль</span>
+        <span>сменить <br> пароль</span>
       </div>
     </div>
 
@@ -61,7 +63,7 @@
         <a class="btn" href="order.html">Заказать кружку</a>
       </div>
 
-      <div class="cups-items" data-js-flickity>
+      <div class="cups-items cups-items--personal" data-js-flickity>
         <div class="cups__item cups__item--ordered carousel-cell">
           <img src="static/img/del/cup.png" alt="">
         </div>
@@ -88,7 +90,7 @@
         </div>
       </div>
 
-      <div class="personal-ball-add">
+      <div class="personal-ball-add personal-ball-add--personal">
         <span>Активируй коды <br> и копи баллы!</span>
         <form>
           <input class="input input--small" type="text" placeholder="Введите код" required>
