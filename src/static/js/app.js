@@ -273,6 +273,6 @@ $(() => {
     }
   });
 
-  $('[data-js-responsiveTabs=2]').responsiveTabs('deactivate', 0);
+  $('[data-js-responsiveTabs]:not([data-js-responsiveTabs=1])').responsiveTabs('deactivate', 0);
 
 });
