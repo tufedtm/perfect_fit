@@ -216,61 +216,59 @@
           </div>
         </div>
 
-        <div class="personal-form__bottom">
-          <div class="order-tab3__form-wrap">
-            <div class="order-tab3__form-left">
-              <label>Почтовый <br> индекс
-                <input class="input input--small" type="text" required>
+        <div class="personal-form__bottom order-tab3__form-wrap">
+          <div class="order-tab3__form-left">
+            <label>Почтовый <br> индекс
+              <input class="input input--small" type="text" required>
+            </label>
+            <label>Страна
+              <input class="input input--small" type="text" required>
+            </label>
+            <label>Регион
+              <select name="region" id="select-region" title="region">
+                <option value="" disabled selected hidden>Выберите...</option>
+                <option value="reg1">рег1</option>
+                <option value="reg2">рег2</option>
+              </select>
+            </label>
+            <label>Населенный <br> пункт
+              <select name="locality" id="select-locality" title="locality">
+                <option value="" disabled selected hidden>Выберите...</option>
+                <option value="loc1">НП1</option>
+                <option value="loc2">НП2</option>
+              </select>
+            </label>
+            <label>Название н.п.
+              <input class="input input--small" type="text">
+            </label>
+          </div>
+          <div class="order-tab3__form-right">
+            <label>Тип улицы
+              <select name="street" id="select-street" title="street">
+                <option value="" disabled selected hidden>Выберите...</option>
+                <option value="street1">НП1</option>
+                <option value="street2">НП2</option>
+              </select>
+            </label>
+            <label>Название <br> улицы
+              <input class="input input--small" type="text">
+            </label>
+            <div class="small-input-wrap">
+              <label class="label--small">Дом
+                <input class="input input--small input--micro" type="text">
               </label>
-              <label>Страна
-                <input class="input input--small" type="text" required>
+              <label class="label--small">Строение
+                <input class="input input--small input--micro" type="text">
               </label>
-              <label>Регион
-                <select name="region" id="select-region" title="region">
-                  <option value="" disabled selected hidden>Выберите...</option>
-                  <option value="reg1">рег1</option>
-                  <option value="reg2">рег2</option>
-                </select>
+              <label class="label--small">Корпус
+                <input class="input input--small input--micro" type="text">
               </label>
-              <label>Населенный <br> пункт
-                <select name="locality" id="select-locality" title="locality">
-                  <option value="" disabled selected hidden>Выберите...</option>
-                  <option value="loc1">НП1</option>
-                  <option value="loc2">НП2</option>
-                </select>
-              </label>
-              <label>Название н.п.
-                <input class="input input--small" type="text">
+              <label class="label--small">Квартира
+                <input class="input input--small input--micro" type="text">
               </label>
             </div>
-            <div class="order-tab3__form-right">
-              <label>Тип улицы
-                <select name="street" id="select-street" title="street">
-                  <option value="" disabled selected hidden>Выберите...</option>
-                  <option value="street1">НП1</option>
-                  <option value="street2">НП2</option>
-                </select>
-              </label>
-              <label>Название <br> улицы
-                <input class="input input--small" type="text">
-              </label>
-              <div class="small-input-wrap">
-                <label class="label--small">Дом
-                  <input class="input input--small input--micro" type="text">
-                </label>
-                <label class="label--small">Строение
-                  <input class="input input--small input--micro" type="text">
-                </label>
-                <label class="label--small">Корпус
-                  <input class="input input--small input--micro" type="text">
-                </label>
-                <label class="label--small">Квартира
-                  <input class="input input--small input--micro" type="text">
-                </label>
-              </div>
-              <input type="checkbox" class="checkbox checkbox--xs" id="checkbox-personal" checked>
-              <label for="checkbox-personal">Я даю согласие на обработку персональных данных</label>
-            </div>
+            <input type="checkbox" class="checkbox checkbox--xs" id="checkbox-personal" checked>
+            <label for="checkbox-personal">Я даю согласие на обработку персональных данных</label>
           </div>
         </div>
 

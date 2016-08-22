@@ -173,7 +173,6 @@ $(() => {
 
   personalTabs.on('click', function () {
     var index = $(this).attr('data-js-personal-tabs');
-    console.log(index);
     personalTabs.removeClass('current');
     $(this).addClass('current');
     personalTabsContent.removeClass('current');

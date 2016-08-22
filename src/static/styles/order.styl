@@ -188,12 +188,19 @@
     align-items: center
     width: 420px
     margin-bottom: 8px
+    @media (max-width: 440px)
+      flex-direction: column
+      align-items: flex-start
+      max-width: 300px
+      height: auto
+      br
+        display: none
 
   .input
     margin-bottom: 0
 
 .order-tab2__form-fieldset
-  height: 40px
+  min-height: 40px
   .order-tab2__form-fieldset-wrap
     width: 300px
   label
@@ -360,8 +367,19 @@
     display: flex
     justify-content: space-between
     align-items: center
+    max-width: 100%
     width: 420px
     margin-bottom: 8px
+
+    @media (max-width: 440px)
+      flex-direction: column
+      align-items: flex-start
+      max-width: 300px
+      height: auto
+      margin-left: auto
+      margin-right: auto
+      br
+        display: none
 
     &.label--small
       width: 200px
@@ -378,6 +396,12 @@
 
 .small-input-wrap
   column-count: 2
+  @media (max-width: 440px)
+    max-width: 300px
+    .label--small
+      max-width: 100%
+    .input--micro
+      width: 100%
 
 .order-tab3__second-wrap
   container(850px)
