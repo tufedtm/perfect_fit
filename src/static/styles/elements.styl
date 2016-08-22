@@ -1,5 +1,8 @@
 .h1
   display: block
+  padding-left: 5px
+  padding-right: 5px
+
   color: grey-7c
   font-size 27px
   font-weight 700
@@ -195,6 +198,8 @@ textarea
 .r-tabs
   position: relative
   .r-tabs-nav
+    max-width: 800px
+    margin: auto
     padding: 0
 
     text-align: center
@@ -205,6 +210,18 @@ textarea
       display: inline-block
       + .r-tabs-tab
         margin-left: 100px
+
+  .r-tabs-tab
+  .r-tabs-accordion-title
+    &.r-tabs-state-active
+      &::before
+        css-triangle(#f7f7f7, up, 34px, 12px)
+        position: absolute
+        top: calc(100% + 45px)
+        left: 0
+        right: 0
+        bottom: 100%
+        margin: auto
 
   .r-tabs-nav .r-tabs-anchor
   .r-tabs-accordion-title .r-tabs-anchor
@@ -235,14 +252,19 @@ textarea
       top: 5px
       left: calc(100% + 10px)
 
-  .r-tabs-state-active .r-tabs-anchor
-    color: active-color
-    &:before
-      background-image: url(../img/faq_bd-active.svg)
-    &:after
-      css-triangle(active-color, up, 15px, 8px)
+  .r-tabs-state-active
+    .r-tabs-anchor
+      color: active-color
+      &:before
+        background-image: url(../img/faq_bd-active.svg)
+      &:after
+        css-triangle(active-color, up, 15px, 8px)
+
+    + .r-tabs-accordion-title
+      margin-top: 35px
 
   .r-tabs-accordion-title
+    position: relative
     display: none
     text-align: center
     @media (max-width: 800px)

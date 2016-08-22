@@ -264,11 +264,15 @@ $(() => {
    * tabs
    */
 
-  $('#responsiveTabs').responsiveTabs({
+  $('[data-js-responsiveTabs]').responsiveTabs({
     startCollapsed: 'accordion',
     activate: function(){
-      initMap();
+      if (document.getElementById('map')){
+        initMap();
+      }
     }
   });
+
+  $('[data-js-responsiveTabs=2]').responsiveTabs('deactivate', 0);
 
 });

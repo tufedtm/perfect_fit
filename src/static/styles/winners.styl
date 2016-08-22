@@ -1,8 +1,15 @@
 .winners-wrap
   padding-top: 40px
   .h1
-    margin-bottom: 45px
     text-align: center
+    @media (max-width: 800px)
+      margin-bottom: 45px
+
+  .r-tabs-nav .r-tabs-anchor
+      margin-top: 35px
+
+  .r-tabs-tab.r-tabs-state-active::before
+    top: calc(100% + 80px)
 
 .tabs-buttons--winners
   @media (max-width: 800px)
@@ -16,7 +23,6 @@
 .tabs-buttons-content
   container()
   position: relative
-  display: none
   padding-top: 85px
   padding-bottom: 70px
 
@@ -27,14 +33,6 @@
     background: none
     padding: 10px
 
-  &::before
-    css-triangle(#f7f7f7, up, 34px, 12px)
-    position: absolute
-    left: 0
-    right: 0
-    bottom: 100%
-    margin: auto
-
   @media (min-width: 801px)
     &:nth-of-type(1)
       &::before
@@ -43,9 +41,6 @@
     &:nth-of-type(3)
       &::before
         left: 535px
-
-  &.active
-    display: block
 
   ol
     max-width: 640px
@@ -59,7 +54,7 @@
       li
         &:nth-of-type(4n)
           border: none
-    @media (max-width: 400px)
+    @media (max-width: 500px)
       column-count: 1
       text-align: center
       li
