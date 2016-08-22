@@ -148,21 +148,21 @@ $(() => {
    */
   $('input[type=radio]').styler();
 
-
-  /*
-   * tab3 head buttons
-   */
-  var tabBtn = $('[data-js-tab-btn]');
-  var tabContent = $('[data-js-tab-content]');
-
-  tabBtn.on('click', function () {
-    var index = $(this).attr('data-js-tab-btn');
-    tabBtn.removeClass('active');
-    $(this).addClass('active');
-    tabContent.removeClass('active');
-    $('[data-js-tab-content=' + index + ']').addClass('active');
-    $('select').trigger('refresh');
-  });
+  //
+  // /*
+  //  * tab3 head buttons
+  //  */
+  // var tabBtn = $('[data-js-tab-btn]');
+  // var tabContent = $('[data-js-tab-content]');
+  //
+  // tabBtn.on('click', function () {
+  //   var index = $(this).attr('data-js-tab-btn');
+  //   tabBtn.removeClass('active');
+  //   $(this).addClass('active');
+  //   tabContent.removeClass('active');
+  //   $('[data-js-tab-content=' + index + ']').addClass('active');
+  //   $('select').trigger('refresh');
+  // });
 
 
   /*
@@ -248,14 +248,27 @@ $(() => {
    * offset test
    */
 
-  var slideout = new Slideout({
-    panel: document.getElementById('main'),
-    menu: document.getElementById('aside'),
-    side: 'right'
-  });
+  if (document.getElementById('aside')) {
+    var slideout = new Slideout({
+      panel: document.getElementById('main'),
+      menu: document.getElementById('aside'),
+      side: 'right'
+    });
 
-  document.querySelector('.aside-toggle-button').addEventListener('click', function () {
-    slideout.toggle();
+    document.querySelector('.aside-toggle-button').addEventListener('click', function () {
+      slideout.toggle();
+    });
+  }
+
+  /*
+   * tabs
+   */
+
+  $('#responsiveTabs').responsiveTabs({
+    startCollapsed: 'accordion',
+    activate: function(){
+      initMap();
+    }
   });
 
 });
