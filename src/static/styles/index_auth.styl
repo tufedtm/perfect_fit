@@ -3,8 +3,37 @@
     display: block
     max-width: 1010px
 
-    background-image: url(../img/auth_bg.jpg);
+    background-image: url(../img/auth_bg.jpg)
     background-position: bottom;
+    @media (max-width: 980px)
+      margin-top: 20px
+    @media (max-width: 900px)
+      height: 350px
+    @media (max-width: 750px)
+      height: 300px
+    @media (max-width: 650px)
+      background-image: url(../img/xs/auth_bg-xs.jpg)
+      margin-bottom: 180px
+
+      .tab2__form-wrap
+        top: 100%
+        left: 0
+        right: 0
+        margin: auto
+        max-width: 90%
+        .tab2__btn
+          display: none
+        .tab2__form
+          display: block
+          .input
+          .btn
+            width: 100%
+            height: 50px
+          .btn
+            line-height: 50px
+
+    @media (max-width: 390px)
+      height: 250px
 
   .tab2__form-wrap
     right: 40px
@@ -17,12 +46,21 @@
   container()
   display: flex
   justify-content: space-between
-  margin-bottom: 80px
+  margin-bottom: 40px
+  .cups-items
+    margin-top: 40px
+
+  @media (max-width: 1000px)
+    flex-direction: column
 
 .current-points-wrap
   margin-right: 16px
   padding-right: 15px
   text-align: center
+
+  @media (max-width: 1000px)
+    margin: 0
+    padding: 0
 
   &.zero-points
     .current-points
@@ -51,27 +89,28 @@
 
 .current-points__text
   position: relative
-  &::before
-  &::after
-    position: absolute
-    top: 0
-    left: calc(100% + 15px)
-    width: 0
-    height: 0
+  @media (min-width: 1001px)
+    &::before
+    &::after
+      position: absolute
+      top: 0
+      left: calc(100% + 15px)
+      width: 0
+      height: 0
 
-    content: ''
+      content: ''
 
-  &::before
-    top: 1px
-    border: solid transparent
-    border-width: 34px 15px
-    border-left-color: #f7f7f7
-    z-index: 1
+    &::before
+      top: 1px
+      border: solid transparent
+      border-width: 34px 15px
+      border-left-color: #f7f7f7
+      z-index: 1
 
-  &::after
-    border: solid transparent
-    border-width: 35px 16px
-    border-left-color: #b0b0af
+    &::after
+      border: solid transparent
+      border-width: 35px 16px
+      border-left-color: #b0b0af
 
 .current-points__text-major
   display: block
@@ -85,7 +124,6 @@
   font-size: 15px
   line-height: 18px
 
-
 .cups-items
   display: flex
   justify-content: space-between
@@ -93,10 +131,29 @@
   flex-grow: 1
   padding-left: 10px
   padding-right: 10px
+  @media (max-width: 800px)
+    display: block
+    padding: 0
+
+    .flickity-page-dots .dot
+      background-color: grey-a5
+      opacity: 1
+      &.is-selected
+        background-color: grey-7c
 
 .cups__item
   position: relative
-  padding: 4px 9px
+  size: 84px
+  padding: 4px 7px
+  margin-bottom: 40px
+  margin-left: 10px
+  @media (max-width: 800px)
+    size: 160px
+    padding: 10px 15px
+    img
+      width: 100%
+      height: auto
+
   &.cups__item--ordered
     border: 1px solid grey-a5;
     border-radius: 10px
@@ -115,5 +172,115 @@
       text-align: center
       opacity: .5
 
+  img
+    max-width: 100%
+
 .cup-order-btn
   margin: 0 auto
+
+/*
+ * aside panel
+ */
+
+.aside-toggle-button
+  position: absolute
+  top: 60px
+  right: 0
+  size: 60px
+  z-index: 1000
+
+  border: none
+  border-radius: 50% 0 0 50%
+  background-color: active-color
+  background-image: url(../img/paw.png)
+  background-repeat: no-repeat
+  background-size: 40px
+  background-position: center
+
+.slideout-open .aside-toggle-button
+  background-image: none
+  &::before
+  &::after
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    display: block
+    width: 30px
+    height: 4px
+    margin: auto
+
+    content: ''
+    border-radius: 10px
+    background-color: #fff
+  &::before
+    transform: rotate(45deg)
+  &::after
+    transform: rotate(-45deg)
+
+.slideout-panel
+  position: relative
+  z-index: 1
+  will-change: transform
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel
+  overflow: hidden
+
+.slideout-open .slideout-panel
+  &::before
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 2
+    background-color: rgba(0, 0, 0, .8)
+    content: ''
+
+.slideout-menu
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 256px;
+  padding: 30px 10px
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+
+  &::before
+    position: absolute
+    top: 80px
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: -1
+
+    content: ''
+    background-image: url(../img/winners-bg.png);
+    background-repeat: no-repeat
+    transform: scale(-1, 1)
+
+.slideout-open .slideout-menu
+  display: block
+
+.btn--aside
+  color: #ffec10
+
+.aside__title
+.aside__sub
+  text-align: center
+
+.aside__title
+  margin-bottom: 250px
+  color: active-color
+  font-size: 20px
+  font-weight: 700
+  text-transform: uppercase
+
+.aside__sub
+  margin-top: 5px
+  color: grey-7c

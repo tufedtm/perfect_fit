@@ -222,4 +222,41 @@ $(() => {
     $('.header-links').toggleClass('active')
   });
 
+
+  /*
+   * cups ordered slider
+   */
+
+  function flkty() {
+    if (window.innerWidth <= 800) {
+      new Flickity('[data-js-flickity]', {
+        prevNextButtons: false,
+        wrapAround: true
+      });
+    } else {
+      new Flickity('[data-js-flickity]').destroy();
+    }
+  }
+
+  if (document.querySelector('[data-js-flickity]')) {
+    $(window).on('load resize', function () {
+      flkty()
+    });
+  }
+
+
+  /*
+   * offset test
+   */
+
+  var slideout = new Slideout({
+    panel: document.getElementById('main'),
+    menu: document.getElementById('aside'),
+    side: 'right'
+  });
+
+  document.querySelector('.aside-toggle-button').addEventListener('click', function () {
+    slideout.toggle();
+  });
+
 });

@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-
+  <button class="aside-toggle-button"></button>
   <div class="index-auth">
 
     <div class="ionTabs__item" data-name="Tab_2_name">
@@ -40,29 +40,29 @@
 
         </div>
 
-        <div class="cups-items">
-          <div class="cups__item cups__item--ordered">
+        <div class="cups-items" data-js-flickity>
+          <div class="cups__item cups__item--ordered carousel-cell">
             <img src="static/img/del/cup.png" alt="">
           </div>
-          <div class="cups__item cups__item--ordered">
+          <div class="cups__item cups__item--ordered carousel-cell">
             <img src="static/img/del/cup.png" alt="">
           </div>
-          <div class="cups__item">
+          <div class="cups__item carousel-cell">
             <img src="static/img/del/cup.png" alt="">
           </div>
-          <div class="cups__item">
+          <div class="cups__item carousel-cell">
             <img src="static/img/del/cup.png" alt="">
           </div>
-          <div class="cups__item">
+          <div class="cups__item carousel-cell">
             <img src="static/img/del/cup.png" alt="">
           </div>
-          <div class="cups__item cups__item--ordered">
+          <div class="cups__item cups__item--ordered carousel-cell">
             <img src="static/img/del/cup.png" alt="">
           </div>
-          <div class="cups__item">
+          <div class="cups__item carousel-cell">
             <img src="static/img/del/cup.png" alt="">
           </div>
-          <div class="cups__item">
+          <div class="cups__item carousel-cell">
             <img src="static/img/del/cup.png" alt="">
           </div>
         </div>
@@ -77,4 +77,12 @@
   </div>
 
   {% include 'pop-up/code-happy.html' %}
+{% endblock %}
+
+{% block after_main %}
+  <aside id="aside">
+    <p class="aside__title">Хочешь зонт?</p>
+    <a class="btn btn--aside" href="">Пройди тест</a>
+    <p class="aside__sub">и удвой шансы на победу</p>
+  </aside>
 {% endblock %}
