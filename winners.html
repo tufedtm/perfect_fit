@@ -46,53 +46,57 @@
   <div class="winners-wrap">
     <h1 class="h1">Победители розыгрыша зонтов</h1>
 
-    <div class="tabs-buttons tabs-buttons--winners">
-      <button class="active" data-js-tab-btn="1">26 сентября &ndash; 1 октября</button>
-      <button data-js-tab-btn="2">19 &ndash; 25 сентября</button>
-      <button data-js-tab-btn="3">12 &ndash; 18 сентября</button>
-    </div>
+    <div id="responsiveTabs">
+      <ul>
+        <li><a href="#tab-1">26 сентября &ndash; 1 октября</a></li>
+        <li><a href="#tab-2">19 &ndash; 25 сентября</a></li>
+        <li><a href="#tab-3">12 &ndash; 18 сентября</a></li>
+      </ul>
 
-    <div class="tabs-buttons-content-wrap">
-
-      <div class="tabs-buttons-content active" data-js-tab-content="1">
-        <ol>
-          <li>1. exe****@mail.ru</li>
-          <li>2. exe****@mail.ru</li>
-          <li>3. exe****@mail.ru</li>
-          <li>4. exe****@mail.ru</li>
-          <li>5. exe****@mail.ru</li>
-          <li>6. exe****@mail.ru</li>
-          <li>7. exe****@mail.ru</li>
-          <li>8. exe****@mail.ru</li>
-        </ol>
+      <div id="tab-1" class="tabs-buttons-content-wrap">
+        <div class="tabs-buttons-content" data-js-tab-content="1">
+          <ol>
+            <li>1. exe****@mail.ru</li>
+            <li>2. exe****@mail.ru</li>
+            <li>3. exe****@mail.ru</li>
+            <li>4. exe****@mail.ru</li>
+            <li>5. exe****@mail.ru</li>
+            <li>6. exe****@mail.ru</li>
+            <li>7. exe****@mail.ru</li>
+            <li>8. exe****@mail.ru</li>
+          </ol>
+        </div>
       </div>
 
-      <div class="tabs-buttons-content" data-js-tab-content="2">
-        <ol>
-          <li>1. exe****@mail.com</li>
-          <li>2. exe****@mail.com</li>
-          <li>3. exe****@mail.com</li>
-          <li>4. exe****@mail.com</li>
-          <li>5. exe****@mail.com</li>
-          <li>6. exe****@mail.com</li>
-          <li>7. exe****@mail.com</li>
-          <li>8. exe****@mail.com</li>
-        </ol>
+      <div id="tab-2" class="tabs-buttons-content-wrap">
+        <div class="tabs-buttons-content" data-js-tab-content="2">
+          <ol>
+            <li>1. exe****@mail.com</li>
+            <li>2. exe****@mail.com</li>
+            <li>3. exe****@mail.com</li>
+            <li>4. exe****@mail.com</li>
+            <li>5. exe****@mail.com</li>
+            <li>6. exe****@mail.com</li>
+            <li>7. exe****@mail.com</li>
+            <li>8. exe****@mail.com</li>
+          </ol>
+        </div>
       </div>
 
-      <div class="tabs-buttons-content" data-js-tab-content="3">
-        <ol>
-          <li>1. exe****@mail.su</li>
-          <li>2. exe****@mail.su</li>
-          <li>3. exe****@mail.su</li>
-          <li>4. exe****@mail.su</li>
-          <li>5. exe****@mail.su</li>
-          <li>6. exe****@mail.su</li>
-          <li>7. exe****@mail.su</li>
-          <li>8. exe****@mail.su</li>
-        </ol>
+      <div id="tab-3" class="tabs-buttons-content-wrap">
+        <div class="tabs-buttons-content" data-js-tab-content="3">
+          <ol>
+            <li>1. exe****@mail.su</li>
+            <li>2. exe****@mail.su</li>
+            <li>3. exe****@mail.su</li>
+            <li>4. exe****@mail.su</li>
+            <li>5. exe****@mail.su</li>
+            <li>6. exe****@mail.su</li>
+            <li>7. exe****@mail.su</li>
+            <li>8. exe****@mail.su</li>
+          </ol>
+        </div>
       </div>
-
     </div>
 
   </div>
@@ -147,6 +151,7 @@
 <script src="static/lib/jquery.formstyler.min.js"></script>
 <script src="static/lib/flickity-2.0.3/flickity.pkgd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.12/slideout.min.js"></script>
+<script src="static/lib/jquery.responsiveTabs.min.js"></script>
 
 <script src="static/js/app.js"></script>
 </body>
