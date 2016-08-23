@@ -6,29 +6,37 @@
 
 .rules__item
   position: relative
-  height: 240px
   margin-bottom: 20px
 
+  border: 1px solid grey-a5
+  border-radius: 10px
   background-repeat: no-repeat
   background-position: bottom
   counter-increment item
 
   &:nth-of-type(1)
-    max-width: 750px
-    padding-top: 115px
+    max-width: 700px
+    margin-top: 70px
+    padding-top: 30px
+    padding-bottom: 20px
     padding-left: 40px
 
-    background-image: url(../img/rules_1.png);
+    &::before
+      bottom: 10px
+      right: -50px
+      width: 434px
+      height: 228px
+      background-image: url(../img/rules_1.png);
 
     &::after
-      top: 100%;
-      right: -20px;
-      transform: scale(-1, 1);
+      top: 100%
+      right: -65px
+      transform: scale(-1, 1)
 
     .rules__title
       margin-bottom: 20px
 
-      color: additional-color-1;
+      color: additional-color-1
       font-size: 20px
       line-height: 25px
 
@@ -36,50 +44,65 @@
       max-width: 260px
 
   &:nth-of-type(2)
-    max-width: 705px
+    max-width: 700px
+    margin-top: 110px
     margin-left: auto
-    padding-top: 115px
+    padding-top: 30px
+    padding-bottom: 20px
     padding-left: 330px
 
-    background-image: url(../img/rules_2.jpg);
+    &::before
+      bottom: 0
+      left: 30px
+      width: 259px
+      height: 220px
+      background-image: url(../img/rules_2.png);
 
     &::after
-      top: 100%;
+      top: 100%
       left: -70px
 
     .rules__title
-      color: active-color;
+      color: active-color
 
   &:nth-of-type(3)
     display: flex
     justify-content: space-between
-    padding-top: 145px
+    margin-top: 110px
+    padding-bottom: 30px
+    padding-top: 60px
     padding-left: 40px
 
-    background-image: url(../img/rules_3.png);
-    background-size: contain
+    &::before
+      bottom: 0
+      left: calc(0px - 100px)
+      right: 0
+      width: 264px
+      height: 208px
+      margin: auto
+
+      background-image: url(../img/rules_3.png)
 
     &::after
       content: none
 
     .rules__title
-      color: additional-color-2;
-
-      &::before
-        top: -32px
+      color: additional-color-2
 
     .rules__text
       margin-top: -10px
       padding-right: 45px
 
+  &::before
   &::after
     content: ''
     position: absolute
     display: block
-    size 46px 80px
-    z-index: 1;
+    z-index: 1
 
-    background-image: url(../img/rules-arr.svg);
+  &::after
+    size 46px 80px
+    background-image: url(../img/rules-arr.svg)
 
 .rules__title
   position: relative
@@ -103,9 +126,9 @@
 
     font-size: 48px
 
-    border: 3px solid;
+    border: 3px solid
     border-radius: 50%
-    background-color: #fff;
+    background-color: #fff
 
 .rules__head
   display: block
