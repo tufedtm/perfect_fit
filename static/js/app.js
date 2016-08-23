@@ -248,15 +248,18 @@ $(function () {
    * tabs
    */
 
-  $('[data-js-responsiveTabs]').responsiveTabs({
-    startCollapsed: 'accordion',
-    activate: function activate() {
-      if (document.getElementById('map')) {
-        initMap();
-      }
-    }
-  });
+  if (document.querySelector('[data-js-responsiveTabs]')) {
 
-  $('[data-js-responsiveTabs]:not([data-js-responsiveTabs=1])').responsiveTabs('deactivate', 0);
+    $('[data-js-responsiveTabs]').responsiveTabs({
+      startCollapsed: 'accordion',
+      activate: function activate() {
+        if (document.getElementById('map')) {
+          initMap();
+        }
+      }
+    });
+
+    $('[data-js-responsiveTabs]:not([data-js-responsiveTabs=1])').responsiveTabs('deactivate', 0);
+  }
 });
 //# sourceMappingURL=app.js.map

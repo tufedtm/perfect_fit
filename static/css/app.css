@@ -1522,27 +1522,108 @@ textarea {
 .rules-wrap {
   max-width: 960px;
   margin: 0 auto;
-  padding-top: 20px;
-  margin-bottom: 55px;
+  padding: 30px 5px 55px;
   counter-reset: item;
+}
+.rules-wrap .h1 {
+  text-align: center;
 }
 .rules__item {
   position: relative;
-  height: 240px;
-  margin-bottom: 20px;
+  border: 1px solid #a5a5a5;
+  border-radius: 10px;
   background-repeat: no-repeat;
   background-position: bottom;
   counter-increment: item;
 }
+@media (max-width: 900px) {
+  .rules__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 500px !important;
+    margin-top: 50px !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 45px 5px 250px !important;
+    text-align: center;
+  }
+  .rules__item::before {
+    bottom: 0;
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto;
+  }
+  .rules__item:nth-of-type(1) {
+    padding-bottom: 320px !important;
+  }
+  .rules__item:nth-of-type(1)::before {
+    max-width: 100%;
+    width: 398px !important;
+    height: 276px !important;
+    background-image: url("../img/rules_1-xs.png") !important;
+  }
+  .rules__item:nth-of-type(1)::after {
+    top: 98% !important;
+    right: 40px !important;
+  }
+  .rules__item:nth-of-type(2)::after {
+    top: 98% !important;
+    left: 30px !important;
+  }
+  .rules__item .rules__title {
+    position: static;
+    margin: 0 0 20px;
+  }
+  .rules__item .rules__title::before {
+    top: -100%;
+    left: 0;
+    right: 0;
+  }
+  .rules__item .rules__text {
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .rules__item:nth-of-type(3) .rules__text span {
+    color: #2267a2;
+    font-weight: 700;
+  }
+}
+@media (max-width: 440px) {
+  .rules__item:nth-of-type(1) {
+    padding-bottom: 250px !important;
+  }
+  .rules__item:nth-of-type(1)::before {
+    max-width: 100%;
+    width: 300px !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  .rules__item:nth-of-type(1)::after {
+    top: 98% !important;
+    right: 40px !important;
+  }
+}
 .rules__item:nth-of-type(1) {
-  max-width: 750px;
-  padding-top: 115px;
+  max-width: 700px;
+  margin-top: 90px;
+  padding-top: 30px;
+  padding-bottom: 20px;
   padding-left: 40px;
+}
+.rules__item:nth-of-type(1)::before {
+  bottom: 10px;
+  right: -50px;
+  width: 434px;
+  height: 228px;
   background-image: url("../img/rules_1.png");
 }
 .rules__item:nth-of-type(1)::after {
   top: 100%;
-  right: -20px;
+  right: -65px;
   -webkit-transform: scale(-1, 1);
           transform: scale(-1, 1);
 }
@@ -1556,11 +1637,19 @@ textarea {
   max-width: 260px;
 }
 .rules__item:nth-of-type(2) {
-  max-width: 705px;
+  max-width: 700px;
+  margin-top: 110px;
   margin-left: auto;
-  padding-top: 115px;
+  padding-top: 30px;
+  padding-bottom: 20px;
   padding-left: 330px;
-  background-image: url("../img/rules_2.jpg");
+}
+.rules__item:nth-of-type(2)::before {
+  bottom: 0;
+  left: 30px;
+  width: 259px;
+  height: 220px;
+  background-image: url("../img/rules_2.png");
 }
 .rules__item:nth-of-type(2)::after {
   top: 100%;
@@ -1576,10 +1665,24 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 145px;
+  margin-top: 110px;
+  padding-bottom: 30px;
+  padding-top: 60px;
   padding-left: 40px;
+}
+.rules__item:nth-of-type(3)::before {
+  bottom: 0;
+  left: -10%;
+  right: 0;
+  width: 264px;
+  height: 208px;
+  margin: auto;
   background-image: url("../img/rules_3.png");
-  background-size: contain;
+}
+@media (max-width: 950px) {
+  .rules__item:nth-of-type(3)::before {
+    left: -18%;
+  }
 }
 .rules__item:nth-of-type(3)::after {
   content: none;
@@ -1587,20 +1690,20 @@ textarea {
 .rules__item:nth-of-type(3) .rules__title {
   color: #2267a2;
 }
-.rules__item:nth-of-type(3) .rules__title::before {
-  top: -32px;
-}
 .rules__item:nth-of-type(3) .rules__text {
   margin-top: -10px;
   padding-right: 45px;
 }
+.rules__item::before,
 .rules__item::after {
   content: '';
   position: absolute;
   display: block;
+  z-index: 1;
+}
+.rules__item::after {
   width: 46px;
   height: 80px;
-  z-index: 1;
   background-image: url("../img/rules-arr.svg");
 }
 .rules__title {
@@ -1647,6 +1750,11 @@ textarea {
 .rules-btn {
   margin: 0 auto 50px;
   width: 380px;
+}
+@media (max-width: 400px) {
+  .rules-btn {
+    font-size: 16px;
+  }
 }
 .auth-reg__container {
   max-width: 960px;
