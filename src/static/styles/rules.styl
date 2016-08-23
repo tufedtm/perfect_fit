@@ -1,12 +1,12 @@
 .rules-wrap
   container()
-  padding-top: 20px
-  margin-bottom: 55px
+  padding: 30px 5px 55px
   counter-reset: item
+  .h1
+    text-align: center
 
 .rules__item
   position: relative
-  margin-bottom: 20px
 
   border: 1px solid grey-a5
   border-radius: 10px
@@ -14,9 +14,71 @@
   background-position: bottom
   counter-increment item
 
+  @media (max-width: 900px)
+    flex-direction: column
+    max-width: 500px !important
+    margin-top: 50px !important
+    margin-left: auto
+    margin-right: auto
+    padding: 45px 5px 250px !important
+    text-align: center
+
+    &::before
+      bottom: 0
+      left: 0 !important
+      right: 0 !important
+      margin: auto
+
+    &:nth-of-type(1)
+      padding-bottom: 320px !important
+      &::before
+        max-width: 100%
+        width: 398px !important
+        height: 276px !important
+        background-image: url(../img/rules_1-xs.png) !important
+      &::after
+        top: 98% !important
+        right: 40px !important
+
+    &:nth-of-type(2)
+      &::after
+        top: 98% !important
+        left: 30px !important
+
+    .rules__title
+      position: static
+      margin: 0 0 20px
+      &::before
+        top: -100%
+        left: 0
+        right: 0
+    .rules__text
+      max-width: none !important
+      margin: 0 auto !important
+      padding: 0 !important
+
+    &:nth-of-type(3)
+      .rules__text
+        span
+          color: additional-color-2
+          font-weight: 700
+
+  @media (max-width: 440px)
+    &:nth-of-type(1)
+      padding-bottom: 250px !important
+      &::before
+        max-width: 100%
+        width: 300px !important
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: bottom
+      &::after
+        top: 98% !important
+        right: 40px !important
+
   &:nth-of-type(1)
     max-width: 700px
-    margin-top: 70px
+    margin-top: 90px
     padding-top: 30px
     padding-bottom: 20px
     padding-left: 40px
@@ -75,13 +137,16 @@
 
     &::before
       bottom: 0
-      left: calc(0px - 100px)
+      left: -10%
       right: 0
       width: 264px
       height: 208px
       margin: auto
 
       background-image: url(../img/rules_3.png)
+      @media (max-width: 950px)
+        left: -18%
+
 
     &::after
       content: none
@@ -144,3 +209,5 @@
 .rules-btn
   margin: 0 auto 50px
   width: 380px
+  @media (max-width: 400px)
+    font-size: 16px
