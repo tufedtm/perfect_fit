@@ -520,8 +520,32 @@ textarea {
     padding: 10px 5px;
   }
 }
+.logo {
+  position: relative;
+}
 .logo img {
   display: block;
+}
+@media (max-width: 650px) {
+  .logo img {
+    max-width: 180px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+@media (max-width: 650px) {
+  .logo::after {
+    position: absolute;
+    left: 100%;
+    bottom: -10px;
+    display: block;
+    width: 80px;
+    height: 25px;
+    content: '';
+    background-image: url("../img/logo-stock.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 .header-links {
   display: -webkit-box;
@@ -3391,6 +3415,9 @@ html.popup-active {
 .pop-up--code-happy .pop-up__ball-add {
   margin-bottom: 20px;
 }
+.pop-up--code .personal-ball-add {
+  margin-top: 30px;
+}
 .pop-up--code-happy .pop-up__content {
   background-image: url("../img/pop-up-code-happy-bg.jpg");
   background-position: bottom;
@@ -3623,6 +3650,14 @@ html.popup-active {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
+.pop-up__cancel:hover {
+  background-color: #7c7c7c;
+}
+.pop-up__cancel:hover::before,
+.pop-up__cancel:hover::after {
+  border-color: #fff;
+  background-color: #fff;
+}
 .pop-up__ball-add {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3663,6 +3698,9 @@ html.popup-active {
   .pop-up__share {
     background-color: #f7f7f7;
   }
+}
+.pop-up__share .soc-buttons :hover {
+  opacity: 0.7;
 }
 @media (min-width: 771px) {
   .pop-up__share .soc-buttons {
