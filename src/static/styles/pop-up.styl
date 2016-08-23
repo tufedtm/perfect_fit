@@ -1,7 +1,7 @@
 html.popup-active {
-  position: relative;
-  margin-right: 17px;
-  overflow: hidden;
+  position: relative
+  margin-right: 17px
+  overflow: hidden
 }
 
 .pop-up
@@ -16,7 +16,7 @@ html.popup-active {
   background-color: rgba(0, 0, 0, .7)
   text-align: center
   z-index: 1000
-  overflow-y: auto;
+  overflow-y: auto
   @media (max-width: 793px)
     padding-top: 100px
 
@@ -83,6 +83,9 @@ html.popup-active {
     .pop-up__ball-add
       margin-bottom: 20px
 
+  &--code
+    .personal-ball-add
+      margin-top: 30px
   &--code-happy
     .pop-up__content
       background-image: url(../img/pop-up-code-happy-bg.jpg)
@@ -161,12 +164,12 @@ html.popup-active {
 .pop-up__content
   max-width: 780px
   width: 100%
-  position: relative;
-  display: inline-block;
+  position: relative
+  display: inline-block
   min-height: 500px
   padding-top: 40px
 
-  vertical-align: middle;
+  vertical-align: middle
 
   border-radius: 10px
   background-color: #fff
@@ -217,7 +220,7 @@ html.popup-active {
   right: 20px
   size: 40px
 
-  border: 2px solid grey-7c;
+  border: 2px solid grey-7c
   border-radius: 50%
   background-color: #fff
 
@@ -242,6 +245,14 @@ html.popup-active {
     transform: rotate(45deg)
   &::after
     transform: rotate(-45deg)
+
+  &:hover
+    background-color: grey-7c
+
+    &::before
+    &::after
+      border-color: #fff
+      background-color: #fff
 
 .pop-up__ball-add
   display: flex
@@ -271,6 +282,8 @@ html.popup-active {
     background-color: grey-f7
 
   .soc-buttons
+    :hover
+      opacity: .7
     @media (min-width: 771px)
       position: absolute
       top: 22px
@@ -287,11 +300,11 @@ html.popup-active {
       size: 30px
       margin-top: 10px
     &:nth-of-type(1)
-      background-image: url(../img/soc-fb-hov.svg);
+      background-image: url(../img/soc-fb-hov.svg)
     &:nth-of-type(2)
-      background-image: url(../img/soc-ok-hov.svg);
+      background-image: url(../img/soc-ok-hov.svg)
     &:nth-of-type(3)
-      background-image: url(../img/soc-vk-hov.svg);
+      background-image: url(../img/soc-vk-hov.svg)
 
 .pop-up__share-text
   line-height: 22px

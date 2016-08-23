@@ -1,5 +1,8 @@
 $(() => {
 
+  $('input[type=tel]').mask('+7 (999) 999-99-99');
+
+
   if ($.ionTabs) {
     $.ionTabs('#tabs_1', {
       type: 'none'
