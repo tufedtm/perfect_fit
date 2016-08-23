@@ -16,14 +16,19 @@ $(() => {
   });
 
 
-  //  faq accord
+  /*
+   * faq accord
+   */
+
   $('.faq__question').on('click', function () {
     $(this).parent().toggleClass('active')
   });
-  //// faq accord
 
 
-  //  add ask btn
+  /*
+   * add ask btn
+   */
+
   $('[data-js-add-ask-btn]').on('click', function () {
     var text = $(this).text();
     $(this).text(
@@ -31,7 +36,6 @@ $(() => {
     );
     $('.faq__ask-wrap').toggleClass('active')
   });
-  ////  add ask btn
 
 
   /*
@@ -59,10 +63,6 @@ $(() => {
       .next()
       .addClass('current')
   }
-
-  /*
-   * order tabs
-   ******************/
 
 
   /*
@@ -153,14 +153,11 @@ $(() => {
     setBigImage(originalImageLink);
   });
 
-  /*
-   * order cups slider
-   *************************/
-
 
   /*
    * select styling
    */
+
   $('select').styler({
     selectSmartPositioning: false,
   });
@@ -169,28 +166,14 @@ $(() => {
   /*
    * radio button styling
    */
-  $('input[type=radio]').styler();
 
-  //
-  // /*
-  //  * tab3 head buttons
-  //  */
-  // var tabBtn = $('[data-js-tab-btn]');
-  // var tabContent = $('[data-js-tab-content]');
-  //
-  // tabBtn.on('click', function () {
-  //   var index = $(this).attr('data-js-tab-btn');
-  //   tabBtn.removeClass('active');
-  //   $(this).addClass('active');
-  //   tabContent.removeClass('active');
-  //   $('[data-js-tab-content=' + index + ']').addClass('active');
-  //   $('select').trigger('refresh');
-  // });
+  $('input[type=radio]').styler();
 
 
   /*
    * personal tabs
    */
+
   var personalTabs = $('[data-js-personal-tabs]');
   var personalTabsContent = $('[data-js-personal-tabs-content]');
 
@@ -283,6 +266,7 @@ $(() => {
     });
   }
 
+
   /*
    * tabs
    */
@@ -301,5 +285,29 @@ $(() => {
     $('[data-js-responsiveTabs]:not([data-js-responsiveTabs=1])').responsiveTabs('deactivate', 0);
 
   }
+
+  /**
+   * test answer displayed
+   */
+  $('[data-js-test-btn]').on('click', function () {
+    var index = $(this).attr('data-js-test-btn');
+    var next = $('[data-js-test-item=' + index + ']');
+
+    if (next.length > 0) {
+      $('[data-js-test-item]').removeClass('current');
+      next.addClass('current');
+    }
+
+  });
+
+  /**
+   * test label checked
+   */
+
+  var answerLabel = $('.test__ask-answers label');
+  answerLabel.on('click', function () {
+    answerLabel.removeClass('checked');
+    $(this).addClass('checked')
+  });
 
 });

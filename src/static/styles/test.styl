@@ -1,0 +1,165 @@
+.test__start
+  container()
+  position: relative
+  display: none
+  align-items: center
+  min-height: 600px
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    width: 294px
+    height: 508px
+    margin: auto
+
+    background-image: url(../img/test/test__start.jpg)
+
+  &.current
+    display: flex
+
+.test__start-content
+  max-width: 640px
+  margin-left: auto
+
+.test__start-title
+  margin-bottom: 20px
+  color: additional-color-2
+  line-height: 40px
+  text-transform: uppercase
+  span
+    &:nth-of-type(1)
+      font-size: 28px
+    &:nth-of-type(2)
+      display: block
+      margin-left: 180px
+      font-size: 38px
+      font-weight: 700
+
+.test__start-sub
+  margin-bottom: 50px
+  padding: 40px
+
+  font-size: 18px
+  line-height: 22px
+  text-align: center
+  border-top: 1px solid #ccc
+  border-bottom: 1px solid #ccc
+
+.test__start-btn
+  margin-left: auto
+  margin-right: auto
+
+/*
+ * ask item
+ */
+
+.test__ask-item
+  container(780px)
+  position: relative
+  display: none
+  margin-top: 60px
+  margin-bottom: 100px
+
+  &::after
+    content: ''
+    position: absolute
+    pointer-events: none
+    background-repeat: no-repeat
+
+  &.current
+    display: block
+
+  &:nth-of-type(1)
+    test-item('../img/test/test__ask-1.png', -30px, -50px)
+
+  &:nth-of-type(2)
+    test-item('../img/test/test__ask-2.jpg', -30px, 0)
+
+  &:nth-of-type(3)
+    test-item('../img/test/test__ask-3.png', -40px, 20px)
+
+  &:nth-of-type(4)
+    test-item('../img/test/test__ask-4.png', -45px, -75px)
+
+  &:nth-of-type(5)
+    test-item('../img/test/test__ask-5.png', -55px, 0)
+
+  &:nth-of-type(6)
+    test-item('../img/test/test__ask-6.png', -30px, -65px)
+
+  &:nth-of-type(7)
+    test-item('../img/test/test__ask-7.png', -50px, -5px)
+
+  &:nth-of-type(8)
+    test-item('../img/test/test__ask-8.png', -65px, 10px)
+
+.test__ask-head
+  display: flex
+  align-items: center
+  height: 110px
+  padding-left: 30px
+  padding-right: 30px
+
+  color: #fff
+  border-radius: 10px
+  background-color: additional-color-2
+
+.test__ask-count
+  flex-shrink: 0
+  margin-right: 30px
+  font-size: 56px
+
+.test__ask-count-current
+  font-weight: 700
+
+.test__ask-count-all
+  margin-left: -15px
+  opacity: .1
+
+.test__ask-title
+  font-size: 18px
+  font-weight: 700
+  line-height: 22px
+
+.test__ask-answers
+  margin-bottom: 70px
+  label
+    display: flex
+    align-items: center
+    height: 72px
+    padding-left: 50px
+    padding-right: 50px
+
+    border-bottom: 1px solid #ccc
+    cursor: pointer
+    &:hover
+    &.checked
+      background-color: grey-f7
+  .jq-radio
+    flex-shrink: 0
+    width: 28px
+    height: 28px
+    margin-right: 50px
+
+    border: 2px solid additional-color-2
+    border-radius: 10px
+    background-color: grey-f7
+
+  .jq-radio.checked .jq-radio__div
+    position: relative
+    top: -3px
+    left: 5px
+    width: 27px
+    height: 23px
+    margin: 0
+    border-radius: 0
+    background: none
+    background-image: url(../img/test/checked.svg)
+    background-repeat: no-repeat
+    background-size: contain
+
+.test__answer-btn
+  margin-left: auto

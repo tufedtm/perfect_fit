@@ -70,3 +70,11 @@ css-triangle($triangle-color, $triangle-direction, $triangle-width, $triangle-he
     border-color: transparent $triangle-color transparent transparent
     border-right-style: solid
     border-left-width: 0
+
+test-item($img, $bottom, $left)
+  &::after
+    bottom: $bottom
+    left: $left
+    width: image-size($img)[0]
+    height: image-size($img)[1]
+    background-image: url($img)
