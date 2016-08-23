@@ -71,7 +71,8 @@ $(() => {
 
   var cupsSlider = $('.order__cups-wrap');
   var cupsItem = $('.order__cups-item');
-  var originalImage = cupsSlider.find('a');
+  var originalImageAll = cupsSlider.find('a');
+  var originalImage = cupsSlider.find('a:not(.cups-disable)');
   var arrowsClasses = {
     prev: 'cups-slider-prev',
     next: 'cups-slider-next'
@@ -85,6 +86,22 @@ $(() => {
     cupsItem.find('img').attr('src', link);
   }
 
+  function prevItem(current) {
+    current = current.prev();
+    if (current.hasClass('cups-disable')) {
+      return prevItem(current)
+    }
+    return current
+  }
+
+  function nextItem(current) {
+    current = current.next();
+    if (current.hasClass('cups-disable')) {
+      return nextItem(current)
+    }
+    return current
+  }
+
   cupsItem.prepend('<span class="' + arrowsClasses.prev + '"></span>');
   cupsItem.append('<span class="' + arrowsClasses.next + '"></span>');
 
@@ -93,7 +110,7 @@ $(() => {
 
   prevArr.on('click', function () {
     var current = getCurrent();
-    var prev = current.prev();
+    var prev = prevItem(current);
 
     $(originalImage).removeClass('current');
     prev.addClass('current');
@@ -108,7 +125,7 @@ $(() => {
 
   nextArr.on('click', function () {
     var current = getCurrent();
-    var next = current.next();
+    var next = nextItem(current);
 
     $(originalImage).removeClass('current');
     next.addClass('current');
@@ -121,8 +138,11 @@ $(() => {
     }
   });
 
-  originalImage.on('click', function (e) {
+  originalImageAll.on('click', function (e) {
     e.preventDefault();
+  });
+
+  originalImage.on('click', function () {
 
     originalImage.removeClass('current');
 
