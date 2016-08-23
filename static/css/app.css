@@ -3462,15 +3462,18 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   max-width: 730px;
-  margin: 30px auto 60px;
+  margin: 0 auto 50px;
 }
 .test-fin__package {
   position: relative;
-  max-width: 410px;
+  max-width: 420px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding-left: 120px;
+  padding-left: 115px;
   line-height: 20px;
 }
 .test-fin__package::before {
@@ -3484,6 +3487,7 @@ textarea {
 }
 .test-fin__share {
   position: relative;
+  margin-top: 30px;
   padding-left: 140px;
   line-height: 20px;
 }
@@ -3505,7 +3509,7 @@ textarea {
   width: 47px;
   height: 118px;
   left: 100%;
-  top: 50%;
+  top: 20px;
   background-image: url("../img/test/test-fin-share-arr.svg");
 }
 .test-fin__share-btns {
